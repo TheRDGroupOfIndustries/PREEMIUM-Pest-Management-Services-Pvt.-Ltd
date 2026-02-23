@@ -37,7 +37,7 @@ const Contact = () => {
                 <h2 className="font-heading text-2xl font-bold text-foreground mb-6">Get in Touch</h2>
                 <div className="space-y-5 mb-8">
                   {[
-                    { icon: Phone, label: "Phone", value: "+91 98765 43210", href: "tel:+919876543210" },
+                    { icon: Phone, label: "Phone", value: "+91 70016 64727", href: "tel:+917001664727" },
                     { icon: Mail, label: "Email", value: "info@preemium.in", href: "mailto:info@preemium.in" },
                     { icon: MapPin, label: "Address", value: "Varanasix`", href: undefined },
                     { icon: Clock, label: "Hours", value: "Mon – Sat: 9:00 AM – 6:00 PM", href: undefined },

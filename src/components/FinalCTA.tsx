@@ -19,14 +19,14 @@ const FinalCTA = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="tel:+919876543210"
+              href="tel:+917001664727"
               className="bg-primary-foreground text-primary px-8 py-3.5 rounded-full font-heading font-semibold text-sm tracking-wide hover-lift inline-flex items-center justify-center gap-2"
             >
               <Phone className="h-4 w-4" />
               Call Now
             </a>
             <a
-              href="https://wa.me/919876543210"
+              href="https://wa.me/917001664727"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-transparent border-2 border-primary-foreground text-primary-foreground px-8 py-3.5 rounded-full font-heading font-semibold text-sm tracking-wide hover-lift inline-flex items-center justify-center gap-2"

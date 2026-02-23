@@ -65,9 +65,9 @@ const Footer = () => {
           <div>
             <h4 className="font-heading text-lg font-semibold text-foreground mb-4">Contact Us</h4>
             <div className="space-y-3">
-              <a href="tel:+919876543210" className="flex items-start gap-3 text-sm text-muted-foreground hover:text-primary transition-colors">
+              <a href="tel:+917001664727" className="flex items-start gap-3 text-sm text-muted-foreground hover:text-primary transition-colors">
                 <Phone className="h-4 w-4 mt-0.5 text-primary shrink-0" />
-                +91 98765 43210
+                +91 70016 64727
               </a>
               <a href="mailto:info@preemium.in" className="flex items-start gap-3 text-sm text-muted-foreground hover:text-primary transition-colors">
                 <Mail className="h-4 w-4 mt-0.5 text-primary shrink-0" />

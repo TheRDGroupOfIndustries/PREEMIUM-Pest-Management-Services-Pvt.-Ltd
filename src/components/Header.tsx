@@ -59,11 +59,11 @@ const Header = () => {
         {/* CTA */}
         <div className="hidden md:flex items-center gap-8">
           <a
-            href="tel:+919876543210"
+            href="tel:+917001664727"
             className="flex items-center gap-2 text-sm text-foreground font-body"
           >
             <Phone className="h-4 w-4 text-primary" />
-            +91 98765 43210
+            +91 70016 64727
           </a>
           <Link
             to="/contact"

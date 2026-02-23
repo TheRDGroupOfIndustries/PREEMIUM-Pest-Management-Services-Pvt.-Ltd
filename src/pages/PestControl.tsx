@@ -82,11 +82,11 @@ const PestControl = () => {
                                     Book Inspection Online
                                 </Link>
                                 <a
-                                    href="tel:+919876543210"
+                                    href="tel:+917001664727"
                                     className="bg-white text-primary hover:bg-gray-50 px-8 py-4 rounded-full font-heading font-semibold tracking-wide flex items-center justify-center gap-2 transition-all shadow-lg"
                                 >
                                     <Phone className="w-5 h-5 text-primary" />
-                                    Call +91 98765 43210
+                                    Call +91 70016 64727
                                 </a>
                             </div>
                         </motion.div>
@@ -207,14 +207,14 @@ const PestControl = () => {
                         </p>
                         <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
                             <a
-                                href="tel:+919876543210"
+                                href="tel:+917001664727"
                                 className="bg-white text-primary px-8 py-4 rounded-full font-heading font-bold tracking-wide flex items-center gap-2 hover:-translate-y-1 transition-transform shadow-lg"
                             >
                                 <Phone className="w-5 h-5 bg-primary/10 p-1 rounded-full" />
-                                Call Toll Free: 1800 123 4567
+                                Call Toll Free: +91 70016 64727
                             </a>
                             <a
-                                href="https://wa.me/919876543210"
+                                href="https://wa.me/917001664727"
                                 className="bg-[#25D366] text-white px-8 py-4 rounded-full font-heading font-bold tracking-wide flex items-center gap-2 hover:-translate-y-1 transition-transform shadow-lg"
                             >
                                 <MessageCircle className="w-5 h-5" />

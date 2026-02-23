@@ -80,7 +80,7 @@ const HeroSlider = () => {
                 Book Professional Inspection
               </a>
               <a
-                href="https://wa.me/919876543210"
+                href="https://wa.me/917001664727"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-primary-foreground/20 backdrop-blur-sm border border-primary-foreground/30 text-primary-foreground px-8 py-3.5 rounded-full font-heading font-semibold text-sm tracking-wide hover-lift inline-flex items-center justify-center gap-2"
