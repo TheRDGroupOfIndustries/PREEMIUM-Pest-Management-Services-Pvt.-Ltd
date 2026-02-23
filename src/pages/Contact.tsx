@@ -39,7 +39,7 @@ const Contact = () => {
                   {[
                     { icon: Phone, label: "Phone", value: "+91 70016 64727, +91 74608 55879", href: "tel:+917001664727" },
                     { icon: Mail, label: "Email", value: "info@preemium.in", href: "mailto:info@preemium.in" },
-                    { icon: MapPin, label: "Address", value: "Varanasix`", href: undefined },
+                    { icon: MapPin, label: "Address", value: "Varanasi, Uttar Pradesh, India", href: undefined },
                     { icon: Clock, label: "Hours", value: "Mon – Sat: 9:00 AM – 6:00 PM", href: undefined },
                   ].map((item) => (
                     <div key={item.label} className="flex items-start gap-4">
