@@ -25,6 +25,7 @@ const Footer = () => {
                 { label: "Services", path: "/services" },
                 { label: "Industries We Serve", path: "/industries" },
                 { label: "Our Process", path: "/our-process" },
+                { label: "Pest Control", path: "/pest-control" },
                 { label: "Certifications", path: "/certifications" },
                 { label: "Gallery", path: "/gallery" },
                 { label: "Career", path: "/career" },

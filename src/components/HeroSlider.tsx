@@ -1,9 +1,10 @@
 import { useState, useEffect, useCallback } from "react";
 import { ChevronLeft, ChevronRight, Phone, MessageCircle } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import hero1 from "@/assets/hero-1.jpg";
-import hero2 from "@/assets/hero-2.jpg";
-import hero3 from "@/assets/hero-3.jpg";
+
+import hero1 from "@/assets/Primium Pest Control/image2.jpeg";
+import hero2 from "@/assets/Primium Pest Control/image16.jpeg";
+import hero3 from "@/assets/Primium Pest Control/image13.jpeg";
 
 const slides = [
   {
@@ -64,10 +65,10 @@ const HeroSlider = () => {
             transition={{ duration: 0.6, delay: 0.3 }}
             className="max-w-2xl"
           >
-            <h1 className="font-heading text-3xl md:text-5xl lg:text-6xl font-bold text-primary-foreground leading-tight mb-4">
+            <h1 className="font-heading text-3xl md:text-5xl lg:text-6xl font-bold text-primary-foreground leading-tight mb-4 drop-shadow-sm">
               {slides[current].headline}
             </h1>
-            <p className="font-body text-base md:text-lg text-primary-foreground/90 mb-8 leading-relaxed">
+            <p className="font-body text-base md:text-lg text-primary-foreground/90 mb-8 leading-relaxed drop-shadow-sm">
               {slides[current].subheadline}
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
@@ -106,9 +107,8 @@ const HeroSlider = () => {
           <button
             key={i}
             onClick={() => setCurrent(i)}
-            className={`w-3 h-3 rounded-full transition-all ${
-              i === current ? "bg-primary w-8" : "bg-primary-foreground/50"
-            }`}
+            className={`w-3 h-3 rounded-full transition-all ${i === current ? "bg-primary w-8" : "bg-primary-foreground/50"
+              }`}
             aria-label={`Go to slide ${i + 1}`}
           />
         ))}
