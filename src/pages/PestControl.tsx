@@ -5,40 +5,45 @@ import WhatsAppWidget from "@/components/WhatsAppWidget";
 import { motion } from "framer-motion";
 import { Shield, Sparkles, Home, Phone, MessageCircle, ArrowRight, ShieldCheck, CheckCircle2 } from "lucide-react";
 
-// Using existing assets for the services grid
-import antImg from "@/assets/Primium Pest Control/image11.jpeg";
-import cockroachImg from "@/assets/Primium Pest Control/image14.jpeg";
-import termiteImg from "@/assets/Primium Pest Control/image5.jpeg";
-import rodentImg from "@/assets/Primium Pest Control/image6.jpeg";
-import bedbugImg from "@/assets/Primium Pest Control/image8.jpeg";
-import mosquitoImg from "@/assets/Primium Pest Control/image17.jpeg";
-import genericImg1 from "@/assets/Primium Pest Control/image10.jpeg";
-import genericImg2 from "@/assets/Primium Pest Control/image9.jpeg";
-import genericImg3 from "@/assets/Primium Pest Control/image15.jpeg";
-import genericImg4 from "@/assets/Primium Pest Control/image4.jpeg";
-import genericImg5 from "@/assets/Primium Pest Control/image13.jpeg";
+// Dedicated pest images from assets/animals
+import antImg from "@/assets/animals/ants.jpg";
+import bedbugImg from "@/assets/animals/bed_bugs.jpg";
+import cockroachImg from "@/assets/animals/cockroaches.png";
+import crawlingInsectImg from "@/assets/animals/crawling_insects.png";
+import fabricBeetleImg from "@/assets/animals/fabric_beetles.jpg";
+import flyImg from "@/assets/animals/flies.jpg";
+import grainBeetleImg from "@/assets/animals/grain_beetles.png";
+import mouseImg from "@/assets/animals/mice.jpg";
+import mosquitoImg from "@/assets/animals/mosquitos.jpg";
+import silverfishImg from "@/assets/animals/silverfish.jpg";
+import spiderImg from "@/assets/animals/spiders.jpg";
+import termiteImg from "@/assets/animals/termites.jpg";
+import woodBorerImg from "@/assets/animals/wood_borers.jpg";
+import ratImg from "@/assets/animals/rats.png";
+import bandicootRatImg from "@/assets/animals/bandicoot_rat.png";
+import birdImg from "@/assets/animals/birds.png";
 
 // Hero Image
 import heroImg from "@/assets/Primium Pest Control/image7.jpeg";
 
 const pestServices = [
     { title: "Termites", image: termiteImg, link: "/contact" },
-    { title: "Flies", image: genericImg1, link: "/contact" },
+    { title: "Flies", image: flyImg, link: "/contact" },
     { title: "Mosquitos", image: mosquitoImg, link: "/contact" },
     { title: "Ants", image: antImg, link: "/contact" },
     { title: "Cockroaches", image: cockroachImg, link: "/contact" },
     { title: "Bed bugs", image: bedbugImg, link: "/contact" },
-    { title: "Silverfish", image: genericImg2, link: "/contact" },
-    { title: "Grain beetles", image: genericImg3, link: "/contact" },
-    { title: "Fabric beetles", image: genericImg4, link: "/contact" },
-    { title: "Crawling insects", image: genericImg5, link: "/contact" },
-    { title: "Ticks", image: bedbugImg, link: "/contact" },
-    { title: "Rats", image: rodentImg, link: "/contact" },
-    { title: "Mice", image: rodentImg, link: "/contact" },
-    { title: "Bandicoot rat", image: rodentImg, link: "/contact" },
-    { title: "Birds", image: genericImg1, link: "/contact" },
-    { title: "Wood borers", image: termiteImg, link: "/contact" },
-    { title: "Spiders", image: genericImg2, link: "/contact" },
+    { title: "Silverfish", image: silverfishImg, link: "/contact" },
+    { title: "Grain beetles", image: grainBeetleImg, link: "/contact" },
+    { title: "Fabric beetles", image: fabricBeetleImg, link: "/contact" },
+    { title: "Crawling insects", image: crawlingInsectImg, link: "/contact" },
+    { title: "Ticks", image: bedbugImg, link: "/contact" }, // Re-using bedbug as macro is similar
+    { title: "Rats", image: ratImg, link: "/contact" },
+    { title: "Mice", image: mouseImg, link: "/contact" },
+    { title: "Bandicoot rat", image: bandicootRatImg, link: "/contact" },
+    { title: "Birds", image: birdImg, link: "/contact" },
+    { title: "Wood borers", image: woodBorerImg, link: "/contact" },
+    { title: "Spiders", image: spiderImg, link: "/contact" },
 ];
 
 const processSteps = [
