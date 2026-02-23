@@ -10,6 +10,7 @@ import OurProcess from "./pages/OurProcess";
 import Certifications from "./pages/Certifications";
 import Contact from "./pages/Contact";
 import Gallery from "./pages/Gallery";
+import Career from "./pages/Career";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -27,6 +28,7 @@ const App = () => (
           <Route path="/our-process" element={<OurProcess />} />
           <Route path="/certifications" element={<Certifications />} />
           <Route path="/gallery" element={<Gallery />} />
+          <Route path="/career" element={<Career />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<NotFound />} />
         </Routes>

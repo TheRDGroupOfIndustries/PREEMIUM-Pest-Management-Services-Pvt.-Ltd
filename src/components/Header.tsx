@@ -11,6 +11,7 @@ const navLinks = [
   { label: "Our Process", path: "/our-process" },
   { label: "Gallery", path: "/gallery" },
   { label: "Certifications", path: "/certifications" },
+  { label: "Career", path: "/career" },
   { label: "Contact", path: "/contact" },
 ];
 
@@ -45,8 +46,8 @@ const Header = () => {
               key={link.path}
               to={link.path}
               className={`nav-pill ${location.pathname === link.path
-                  ? "bg-primary text-primary-foreground"
-                  : "text-foreground hover:bg-primary-light hover:text-accent-foreground"
+                ? "bg-primary text-primary-foreground"
+                : "text-foreground hover:bg-primary-light hover:text-accent-foreground"
                 }`}
             >
               {link.label}
@@ -96,8 +97,8 @@ const Header = () => {
                   key={link.path}
                   to={link.path}
                   className={`px-4 py-3 rounded-lg text-sm font-heading tracking-wide ${location.pathname === link.path
-                      ? "bg-primary text-primary-foreground"
-                      : "text-foreground hover:bg-accent"
+                    ? "bg-primary text-primary-foreground"
+                    : "text-foreground hover:bg-accent"
                     }`}
                 >
                   {link.label}
