@@ -40,8 +40,8 @@ const Header = () => {
           <img src={logo} alt="PREEMIUM Pest Management" className="h-12 md:h-14 w-auto" />
         </Link>
 
-        {/* Desktop Nav - Capsule */}
-        <nav className="hidden lg:flex items-center bg-secondary rounded-full px-2 py-1 gap-1">
+        {/* Desktop Nav */}
+        <nav className="hidden xl:flex items-center gap-1 xl:gap-3 overflow-hidden">
           {navLinks.map((link) => (
             <Link
               key={link.path}
@@ -75,7 +75,7 @@ const Header = () => {
 
         {/* Mobile toggle */}
         <button
-          className="lg:hidden text-foreground p-2"
+          className="xl:hidden text-foreground p-2 rounded-md hover:bg-accent transition-colors"
           onClick={() => setMobileOpen(!mobileOpen)}
           aria-label="Toggle menu"
         >
@@ -90,7 +90,7 @@ const Header = () => {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="lg:hidden bg-background border-t border-border overflow-hidden"
+            className="xl:hidden bg-background border-t border-border overflow-hidden shadow-xl"
           >
             <nav className="flex flex-col p-4 gap-2">
               {navLinks.map((link) => (

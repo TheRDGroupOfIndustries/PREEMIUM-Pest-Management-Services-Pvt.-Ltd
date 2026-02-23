@@ -12,17 +12,33 @@ import termiteImg from "@/assets/Primium Pest Control/image5.jpeg";
 import rodentImg from "@/assets/Primium Pest Control/image6.jpeg";
 import bedbugImg from "@/assets/Primium Pest Control/image8.jpeg";
 import mosquitoImg from "@/assets/Primium Pest Control/image17.jpeg";
+import genericImg1 from "@/assets/Primium Pest Control/image10.jpeg";
+import genericImg2 from "@/assets/Primium Pest Control/image9.jpeg";
+import genericImg3 from "@/assets/Primium Pest Control/image15.jpeg";
+import genericImg4 from "@/assets/Primium Pest Control/image4.jpeg";
+import genericImg5 from "@/assets/Primium Pest Control/image13.jpeg";
 
 // Hero Image
 import heroImg from "@/assets/Primium Pest Control/image7.jpeg";
 
 const pestServices = [
-    { title: "Termite Control", image: termiteImg, link: "/contact" },
-    { title: "Cockroach Control", image: cockroachImg, link: "/contact" },
-    { title: "Ant Control", image: antImg, link: "/contact" },
-    { title: "Rodent Control", image: rodentImg, link: "/contact" },
-    { title: "Bed Bug Control", image: bedbugImg, link: "/contact" },
-    { title: "Mosquito Control", image: mosquitoImg, link: "/contact" },
+    { title: "Termites", image: termiteImg, link: "/contact" },
+    { title: "Flies", image: genericImg1, link: "/contact" },
+    { title: "Mosquitos", image: mosquitoImg, link: "/contact" },
+    { title: "Ants", image: antImg, link: "/contact" },
+    { title: "Cockroaches", image: cockroachImg, link: "/contact" },
+    { title: "Bed bugs", image: bedbugImg, link: "/contact" },
+    { title: "Silverfish", image: genericImg2, link: "/contact" },
+    { title: "Grain beetles", image: genericImg3, link: "/contact" },
+    { title: "Fabric beetles", image: genericImg4, link: "/contact" },
+    { title: "Crawling insects", image: genericImg5, link: "/contact" },
+    { title: "Ticks", image: bedbugImg, link: "/contact" },
+    { title: "Rats", image: rodentImg, link: "/contact" },
+    { title: "Mice", image: rodentImg, link: "/contact" },
+    { title: "Bandicoot rat", image: rodentImg, link: "/contact" },
+    { title: "Birds", image: genericImg1, link: "/contact" },
+    { title: "Wood borers", image: termiteImg, link: "/contact" },
+    { title: "Spiders", image: genericImg2, link: "/contact" },
 ];
 
 const processSteps = [
