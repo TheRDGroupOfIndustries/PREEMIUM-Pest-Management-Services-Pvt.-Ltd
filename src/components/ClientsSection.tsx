@@ -1,16 +1,44 @@
 import { motion } from "framer-motion";
-import { Building } from "lucide-react";
+
+import tata from "@/assets/Logos/tata.png";
+import bajaj from "@/assets/Logos/bajaj.png";
+import mahindra from "@/assets/Logos/mahindra.png";
+import wipro from "@/assets/Logos/wipro.png";
+import infosys from "@/assets/Logos/infosys.png";
+import unilever from "@/assets/Logos/unilever.png";
+import godrej from "@/assets/Logos/gordej.png";
+import asian from "@/assets/Logos/asian.png";
+import reliance from "@/assets/Logos/reliance.png";
+import reddy from "@/assets/Logos/reddy.png";
+import cipla from "@/assets/Logos/Cipla.svg";
+import itc from "@/assets/Logos/itc.png";
+import marriott from "@/assets/Logos/marriot.png";
+import hyatt from "@/assets/Logos/hyatt.png";
+import railways from "@/assets/Logos/railways.png";
+import bhel from "@/assets/Logos/bhel.png";
 
 const clients = [
-  "Tata Motors", "Bajaj Auto", "Mahindra & Mahindra", "Wipro", "Infosys",
-  "Hindustan Unilever", "Godrej", "Asian Paints", "Reliance Industries",
-  "Dr. Reddy's", "Cipla", "ITC Hotels", "Marriott", "Hyatt",
-  "Indian Railways", "BHEL",
+  { name: "Tata Motors", src: tata },
+  { name: "Bajaj Auto", src: bajaj },
+  { name: "Mahindra & Mahindra", src: mahindra },
+  { name: "Wipro", src: wipro },
+  { name: "Infosys", src: infosys },
+  { name: "Hindustan Unilever", src: unilever },
+  { name: "Godrej", src: godrej },
+  { name: "Asian Paints", src: asian },
+  { name: "Reliance Industries", src: reliance },
+  { name: "Dr. Reddy's", src: reddy },
+  { name: "Cipla", src: cipla },
+  { name: "ITC Hotels", src: itc },
+  { name: "Marriott", src: marriott },
+  { name: "Hyatt", src: hyatt },
+  { name: "Indian Railways", src: railways },
+  { name: "BHEL", src: bhel },
 ];
 
 const ClientsSection = () => {
   return (
-    <section className="section-padding bg-accent">
+    <section className="section-padding bg-accent/40 border-y border-border/50">
       <div className="container mx-auto">
         <div className="text-center mb-12">
           <span className="text-primary font-heading text-sm font-semibold tracking-widest uppercase">Our Clients</span>
@@ -19,18 +47,21 @@ const ClientsSection = () => {
           </h2>
         </div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-8 gap-4">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-8 gap-4 lg:gap-6">
           {clients.map((client, i) => (
             <motion.div
-              key={client}
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              transition={{ delay: i * 0.04 }}
+              key={client.name}
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: i * 0.05 }}
               viewport={{ once: true }}
-              className="bg-background rounded-lg p-4 flex flex-col items-center justify-center text-center hover-lift shadow-card border border-border/50 min-h-[80px]"
+              className="bg-white rounded-xl p-4 flex items-center justify-center hover:shadow-card border border-border/60 min-h-[100px] transition-all duration-300 group"
             >
-              <Building className="h-5 w-5 text-primary/40 mb-2" />
-              <span className="text-xs font-heading font-medium text-foreground">{client}</span>
+              <img
+                src={client.src}
+                alt={client.name}
+                className="max-h-[60px] max-w-[120px] w-auto h-auto object-contain transition-all duration-300 mix-blend-multiply"
+              />
             </motion.div>
           ))}
         </div>
