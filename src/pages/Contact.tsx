@@ -39,7 +39,7 @@ const Contact = () => {
                   {[
                     { icon: Phone, label: "Phone", value: "+91 98765 43210", href: "tel:+919876543210" },
                     { icon: Mail, label: "Email", value: "info@preemium.in", href: "mailto:info@preemium.in" },
-                    { icon: MapPin, label: "Address", value: "Pune, Maharashtra, India", href: undefined },
+                    { icon: MapPin, label: "Address", value: "Varanasix`", href: undefined },
                     { icon: Clock, label: "Hours", value: "Mon – Sat: 9:00 AM – 6:00 PM", href: undefined },
                   ].map((item) => (
                     <div key={item.label} className="flex items-start gap-4">
@@ -72,7 +72,7 @@ const Contact = () => {
                 {/* Map */}
                 <div className="mt-6 rounded-xl overflow-hidden border border-border shadow-card">
                   <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d242118.14188837484!2d73.72288361804905!3d18.524564857498822!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bf2e67461101%3A0x828d43bf9d9ee343!2sPune%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d115408.097999664!2d82.90870816554735!3d25.32089491852635!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x398e2db76febcf4d%3A0x68131710853ff0b5!2sVaranasi%2C%20Uttar%20Pradesh!5e0!3m2!1sen!2sin!4v1771841131687!5m2!1sen!2sin"
                     width="100%"
                     height="250"
                     style={{ border: 0 }}
