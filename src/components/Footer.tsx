@@ -73,9 +73,9 @@ const Footer = () => {
                 <Phone className="h-4 w-4 mt-0.5 text-primary shrink-0" />
                 +91 74608 55879
               </a>
-              <a href="mailto:info@preemium.in" className="flex items-start gap-3 text-sm text-muted-foreground hover:text-primary transition-colors">
+              <a href="mailto:info@preemiumpestmangagement.com" className="flex items-start gap-3 text-sm text-muted-foreground hover:text-primary transition-colors">
                 <Mail className="h-4 w-4 mt-0.5 text-primary shrink-0" />
-                info@preemium.in
+                info@preemiumpestmangagement.com
               </a>
               <div className="flex items-start gap-3 text-sm text-muted-foreground">
                 <MapPin className="h-4 w-4 mt-0.5 text-primary shrink-0" />
