@@ -9,6 +9,7 @@ const navLinks = [
   { label: "Services", path: "/services" },
   { label: "Industries", path: "/industries" },
   { label: "Our Process", path: "/our-process" },
+  { label: "Gallery", path: "/gallery" },
   { label: "Certifications", path: "/certifications" },
   { label: "Contact", path: "/contact" },
 ];
@@ -28,9 +29,8 @@ const Header = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? "bg-background/95 backdrop-blur-md shadow-card" : "bg-background"
-      }`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? "bg-background/95 backdrop-blur-md shadow-card" : "bg-background"
+        }`}
     >
       <div className="container mx-auto flex items-center justify-between py-3 px-4">
         {/* Logo */}
@@ -44,11 +44,10 @@ const Header = () => {
             <Link
               key={link.path}
               to={link.path}
-              className={`nav-pill ${
-                location.pathname === link.path
+              className={`nav-pill ${location.pathname === link.path
                   ? "bg-primary text-primary-foreground"
                   : "text-foreground hover:bg-primary-light hover:text-accent-foreground"
-              }`}
+                }`}
             >
               {link.label}
             </Link>
@@ -96,11 +95,10 @@ const Header = () => {
                 <Link
                   key={link.path}
                   to={link.path}
-                  className={`px-4 py-3 rounded-lg text-sm font-heading tracking-wide ${
-                    location.pathname === link.path
+                  className={`px-4 py-3 rounded-lg text-sm font-heading tracking-wide ${location.pathname === link.path
                       ? "bg-primary text-primary-foreground"
                       : "text-foreground hover:bg-accent"
-                  }`}
+                    }`}
                 >
                   {link.label}
                 </Link>
