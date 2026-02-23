@@ -2,9 +2,9 @@ import { useState, useEffect, useCallback } from "react";
 import { ChevronLeft, ChevronRight, Phone, MessageCircle } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
-import hero1 from "@/assets/Primium Pest Control/image2.jpeg";
-import hero2 from "@/assets/Primium Pest Control/image16.jpeg";
-import hero3 from "@/assets/Primium Pest Control/image13.jpeg";
+import hero1 from "@/assets/Primium Pest Control/image1.jpeg";
+import hero2 from "@/assets/Primium Pest Control/image3.jpeg";
+import hero3 from "@/assets/Primium Pest Control/image12.jpeg";
 
 const slides = [
   {

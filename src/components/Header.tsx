@@ -34,7 +34,7 @@ const Header = () => {
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? "bg-background/95 backdrop-blur-md shadow-card" : "bg-background"
         }`}
     >
-      <div className="container mx-auto flex items-center justify-between py-3 px-4">
+      <div className="w-full max-w-[1500px] mx-auto flex items-center justify-between py-3 px-4">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-3 shrink-0">
           <img src={logo} alt="PREEMIUM Pest Management" className="h-12 md:h-14 w-auto" />
