@@ -5,7 +5,7 @@ const items = [
   { icon: Shield, label: "DPIIT Recognized" },
   { icon: Award, label: "IPCA Member" },
   { icon: BadgeCheck, label: "Proud Member of BNI" },
-  { icon: Clock, label: "27+ Years Experience" },
+  { icon: Clock, label: "30+ Years Experience" },
   { icon: Users, label: "Trained & Certified Professionals" },
 ];
 

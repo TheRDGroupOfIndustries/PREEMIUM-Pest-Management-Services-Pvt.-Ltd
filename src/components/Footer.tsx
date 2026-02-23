@@ -11,7 +11,7 @@ const Footer = () => {
           <div>
             <img src={logo} alt="PREEMIUM" className="h-16 w-auto mb-4" />
             <p className="text-sm text-muted-foreground leading-relaxed">
-              India's trusted professional pest management company with 27+ years of
+              India's trusted professional pest management company with 30+ years of
               science-driven, eco-friendly solutions for homes, industries & businesses.
             </p>
           </div>

@@ -18,7 +18,7 @@ const slides = [
   },
   {
     image: hero3,
-    headline: "27+ Years of Experience. One Trusted Name.",
+    headline: "30+ Years of Experience. One Trusted Name.",
     subheadline: "Protecting environments with structured, long-term pest control systems",
   },
 ];
