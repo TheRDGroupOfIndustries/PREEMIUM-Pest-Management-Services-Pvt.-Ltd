@@ -16,6 +16,8 @@ import marriott from "@/assets/Logos/marriot.png";
 import hyatt from "@/assets/Logos/hyatt.png";
 import railways from "@/assets/Logos/railways.png";
 import bhel from "@/assets/Logos/bhel.png";
+import adani from "@/assets/Logos/adani.png";
+import oil from "@/assets/Logos/oil.png";
 
 const clients = [
   { name: "Tata Motors", src: tata },
@@ -34,6 +36,8 @@ const clients = [
   { name: "Hyatt", src: hyatt },
   { name: "Indian Railways", src: railways },
   { name: "BHEL", src: bhel },
+  { name: "Adani", src: adani },
+  { name: "Oil", src: oil },
 ];
 
 const ClientsSection = () => {
@@ -47,7 +51,7 @@ const ClientsSection = () => {
           </h2>
         </div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-8 gap-4 lg:gap-6">
+        <div className="flex flex-wrap justify-center gap-4 lg:gap-6">
           {clients.map((client, i) => (
             <motion.div
               key={client.name}
@@ -55,7 +59,7 @@ const ClientsSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: i * 0.05 }}
               viewport={{ once: true }}
-              className="bg-white rounded-xl p-4 flex items-center justify-center hover:shadow-card border border-border/60 min-h-[100px] transition-all duration-300 group"
+              className="bg-white rounded-xl p-4 flex items-center justify-center hover:shadow-card border border-border/60 min-h-[100px] w-[calc(50%-1rem)] sm:w-[calc(33.33%-1.5rem)] md:w-[calc(25%-1.75rem)] lg:w-[calc(12.5%-1.75rem)] transition-all duration-300 group"
             >
               <img
                 src={client.src}
