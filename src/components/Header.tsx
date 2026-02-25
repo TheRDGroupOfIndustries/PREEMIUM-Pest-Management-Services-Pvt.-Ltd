@@ -41,14 +41,14 @@ const Header = () => {
         </Link>
 
         {/* Desktop Nav */}
-        <nav className="hidden xl:flex items-center gap-1 xl:gap-3 overflow-hidden">
+        <nav className="hidden xl:flex items-center gap-1 bg-accent border border-border/50 rounded-full p-1.5 shadow-sm mx-auto">
           {navLinks.map((link) => (
             <Link
               key={link.path}
               to={link.path}
-              className={`nav-pill ${location.pathname === link.path
-                ? "bg-primary text-primary-foreground"
-                : "text-foreground hover:bg-primary-light hover:text-accent-foreground"
+              className={`px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-300 ${location.pathname === link.path
+                  ? "bg-primary text-primary-foreground shadow-sm"
+                  : "text-foreground hover:bg-black/5"
                 }`}
             >
               {link.label}

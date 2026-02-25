@@ -117,7 +117,7 @@ const StopPestsSection = () => {
                                 <div>
                                     <h4 className="font-semibold text-sm text-foreground mb-2">Proudly Serving:</h4>
                                     <p className="text-sm text-muted-foreground mb-1.5"><strong className="text-foreground font-medium">Varanasi Office:</strong> S-20/46, Varuna Bridge Varanasi 221002</p>
-                                    <p className="text-sm text-muted-foreground"><strong className="text-foreground font-medium">Lucknow Office:</strong> Swiss Plaza, 2nd Floor Shop No. 205, Chaudhary Tola Aliganj, Lucknow 226024</p>
+                                    <p className="text-sm text-muted-foreground"><strong className="text-foreground font-medium">Branch Offices:</strong> West Bengal- Haldia, Kharagpur, Durgapur, Asansol, Howrah, Orissa- Jharsuguda, Chhattisgarh- Bilaspur, Uttar Pradesh- Varanasi, Bihar- Patna, Assam- Guwahati</p>
                                 </div>
                             </div>
                         </motion.div>
