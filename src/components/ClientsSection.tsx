@@ -18,6 +18,12 @@ import railways from "@/assets/Logos/railways.png";
 import bhel from "@/assets/Logos/bhel.png";
 import adani from "@/assets/Logos/adani.png";
 import oil from "@/assets/Logos/oil.png";
+import akash from "@/assets/Logos/Akash.png";
+import haldia from "@/assets/Logos/haldia.png";
+import rashmi from "@/assets/Logos/rashmi.png";
+import shree from "@/assets/Logos/shree.png";
+import shyam from "@/assets/Logos/shyam.png";
+import shyamSteel from "@/assets/Logos/shyamSteel.png";
 
 const clients = [
   { name: "Tata Motors", src: tata },
@@ -38,6 +44,12 @@ const clients = [
   { name: "BHEL", src: bhel },
   { name: "Adani", src: adani },
   { name: "Oil", src: oil },
+  { name: "Akash", src: akash },
+  { name: "Haldia", src: haldia },
+  { name: "Rashmi", src: rashmi },
+  { name: "Shree", src: shree },
+  { name: "Shyam", src: shyam },
+  { name: "Shyam Stell", src: shyamSteel },
 ];
 
 const ClientsSection = () => {

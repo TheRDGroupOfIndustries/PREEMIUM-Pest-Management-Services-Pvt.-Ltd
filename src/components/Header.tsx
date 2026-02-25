@@ -7,12 +7,12 @@ import logo from "@/assets/logo.jpeg";
 const navLinks = [
   { label: "Home", path: "/" },
   { label: "Services", path: "/services" },
-  { label: "Industries", path: "/industries" },
-  { label: "Our Process", path: "/our-process" },
+  // { label: "Industries", path: "/industries" },
+  // { label: "Our Process", path: "/our-process" },
   { label: "Pest Control", path: "/pest-control" },
   { label: "Gallery", path: "/gallery" },
   { label: "Certifications", path: "/certifications" },
-  { label: "Career", path: "/career" },
+  // { label: "Career", path: "/career" },
   { label: "Contact", path: "/contact" },
 ];
 
