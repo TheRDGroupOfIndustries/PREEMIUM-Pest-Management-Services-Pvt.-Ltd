@@ -3,8 +3,8 @@ import { ChevronLeft, ChevronRight, Phone, MessageCircle } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 import hero1 from "@/assets/Primium Pest Control/image1.jpeg";
-import hero2 from "@/assets/Primium Pest Control/image3.jpeg";
-import hero3 from "@/assets/Primium Pest Control/image12.jpeg";
+import hero2 from "@/assets/Primium Pest Control/image5.jpeg";
+import hero3 from "@/assets/Primium Pest Control/image8.jpeg";
 
 const slides = [
   {

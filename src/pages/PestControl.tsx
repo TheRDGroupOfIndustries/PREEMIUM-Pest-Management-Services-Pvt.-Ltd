@@ -5,46 +5,8 @@ import WhatsAppWidget from "@/components/WhatsAppWidget";
 import { motion } from "framer-motion";
 import { Shield, Sparkles, Home, Phone, MessageCircle, ArrowRight, ShieldCheck, CheckCircle2 } from "lucide-react";
 
-// Dedicated pest images from assets/animals
-import antImg from "@/assets/animals/ants.jpg";
-import bedbugImg from "@/assets/animals/bed_bugs.jpg";
-import cockroachImg from "@/assets/animals/cockroaches.png";
-import crawlingInsectImg from "@/assets/animals/crawling_insects.png";
-import fabricBeetleImg from "@/assets/animals/fabric_beetles.jpg";
-import flyImg from "@/assets/animals/flies.jpg";
-import grainBeetleImg from "@/assets/animals/grain_beetles.png";
-import mouseImg from "@/assets/animals/mice.jpg";
-import mosquitoImg from "@/assets/animals/mosquitos.jpg";
-import silverfishImg from "@/assets/animals/silverfish.jpg";
-import spiderImg from "@/assets/animals/spiders.jpg";
-import termiteImg from "@/assets/animals/termites.jpg";
-import woodBorerImg from "@/assets/animals/wood_borers.jpg";
-import ratImg from "@/assets/animals/rats.png";
-import bandicootRatImg from "@/assets/animals/bandicoot_rat.png";
-import birdImg from "@/assets/animals/birds.png";
-
-// Hero Image
+import { pestData } from "@/data/pestData";
 import heroImg from "@/assets/Primium Pest Control/image7.jpeg";
-
-const pestServices = [
-    { title: "Termites", image: termiteImg, link: "/contact" },
-    { title: "Flies", image: flyImg, link: "/contact" },
-    { title: "Mosquitos", image: mosquitoImg, link: "/contact" },
-    { title: "Ants", image: antImg, link: "/contact" },
-    { title: "Cockroaches", image: cockroachImg, link: "/contact" },
-    { title: "Bed bugs", image: bedbugImg, link: "/contact" },
-    { title: "Silverfish", image: silverfishImg, link: "/contact" },
-    { title: "Grain beetles", image: grainBeetleImg, link: "/contact" },
-    { title: "Fabric beetles", image: fabricBeetleImg, link: "/contact" },
-    { title: "Crawling insects", image: crawlingInsectImg, link: "/contact" },
-    { title: "Ticks", image: bedbugImg, link: "/contact" }, // Re-using bedbug as macro is similar
-    { title: "Rats", image: ratImg, link: "/contact" },
-    { title: "Mice", image: mouseImg, link: "/contact" },
-    { title: "Bandicoot rat", image: bandicootRatImg, link: "/contact" },
-    { title: "Birds", image: birdImg, link: "/contact" },
-    { title: "Wood borers", image: woodBorerImg, link: "/contact" },
-    { title: "Spiders", image: spiderImg, link: "/contact" },
-];
 
 const processSteps = [
     {
@@ -75,9 +37,9 @@ const PestControl = () => {
             <main className="pt-[72px]">
                 {/* 1. Hero Section */}
                 <section className="relative w-full h-[60vh] min-h-[500px] flex items-center">
-                    <div className="absolute inset-0 z-0">
+                    <div className="absolute inset-0 z-0 bg-accent">
                         <img src={heroImg} alt="Pest Control Services" className="w-full h-full object-cover" />
-                        <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-transparent"></div>
+                        <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-transparent z-10"></div>
                     </div>
 
                     <div className="container mx-auto px-4 relative z-10 text-white">
@@ -170,9 +132,9 @@ const PestControl = () => {
                         </div>
 
                         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                            {pestServices.map((service, idx) => (
+                            {pestData.map((service, idx) => (
                                 <motion.div
-                                    key={idx}
+                                    key={service.id}
                                     initial={{ opacity: 0, scale: 0.95 }}
                                     whileInView={{ opacity: 1, scale: 1 }}
                                     viewport={{ once: true }}
@@ -193,14 +155,14 @@ const PestControl = () => {
                                                 {service.title}
                                             </h3>
                                             <p className="text-muted-foreground text-sm mb-4 line-clamp-2">
-                                                Professional eradication and prevention services tailored to eliminate {service.title.toLowerCase()} from your premises.
+                                                {service.shortDesc}
                                             </p>
                                         </div>
                                         <Link
-                                            to={service.link}
+                                            to={`/pest-control/${service.id}`}
                                             className="inline-flex items-center gap-2 text-primary font-semibold text-sm group/link mt-auto"
                                         >
-                                            Book Service
+                                            View Details
                                             <ArrowRight className="w-4 h-4 transition-transform group-hover/link:translate-x-1" />
                                         </Link>
                                     </div>

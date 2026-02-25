@@ -2,6 +2,7 @@ import Header from "@/components/Header";
 import HeroSlider from "@/components/HeroSlider";
 import TrustStrip from "@/components/TrustStrip";
 import AboutSnapshot from "@/components/AboutSnapshot";
+import StopPestsSection from "@/components/StopPestsSection";
 import ServicesGrid from "@/components/ServicesGrid";
 import GoldSealSection from "@/components/GoldSealSection";
 import ERDMSection from "@/components/ERDMSection";
@@ -22,6 +23,7 @@ const Index = () => {
         <HeroSlider />
         <TrustStrip />
         <AboutSnapshot />
+        <StopPestsSection />
         <ServicesGrid />
         <GoldSealSection />
         <ERDMSection />

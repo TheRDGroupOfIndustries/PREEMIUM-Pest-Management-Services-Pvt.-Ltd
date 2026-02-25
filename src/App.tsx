@@ -12,6 +12,8 @@ import Contact from "./pages/Contact";
 import Gallery from "./pages/Gallery";
 import Career from "./pages/Career";
 import PestControl from "./pages/PestControl";
+import PestDetail from "./pages/PestDetail";
+import ServiceDetail from "./pages/ServiceDetail";
 import NotFound from "./pages/NotFound";
 import ScrollToTop from "./components/ScrollToTop";
 
@@ -27,12 +29,14 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/services" element={<Services />} />
+          <Route path="/services/:id" element={<ServiceDetail />} />
           <Route path="/industries" element={<Industries />} />
           <Route path="/our-process" element={<OurProcess />} />
           <Route path="/certifications" element={<Certifications />} />
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/career" element={<Career />} />
           <Route path="/pest-control" element={<PestControl />} />
+          <Route path="/pest-control/:id" element={<PestDetail />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
