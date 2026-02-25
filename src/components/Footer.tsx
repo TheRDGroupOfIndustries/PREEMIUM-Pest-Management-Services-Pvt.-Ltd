@@ -6,9 +6,9 @@ const Footer = () => {
   return (
     <footer className="bg-secondary border-t border-border">
       <div className="container mx-auto section-padding">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-10">
           {/* Brand */}
-          <div>
+          <div className="flex flex-col items-center md:items-start text-center md:text-left">
             <img src={logo} alt="PREEMIUM" className="h-16 w-auto mb-4" />
             <p className="text-sm text-muted-foreground leading-relaxed">
               India's trusted professional pest management company with 30+ years of
@@ -17,7 +17,7 @@ const Footer = () => {
           </div>
 
           {/* Quick Links */}
-          <div>
+          <div className="text-center md:text-left">
             <h4 className="font-heading text-lg font-semibold text-foreground mb-4">Quick Links</h4>
             <ul className="space-y-2">
               {[
@@ -41,7 +41,7 @@ const Footer = () => {
           </div>
 
           {/* Services */}
-          <div>
+          <div className="text-center md:text-left">
             <h4 className="font-heading text-lg font-semibold text-foreground mb-4">Our Services</h4>
             <ul className="space-y-2">
               {[
@@ -62,23 +62,23 @@ const Footer = () => {
           </div>
 
           {/* Contact */}
-          <div>
+          <div className="text-center md:text-left flex flex-col items-center md:items-start">
             <h4 className="font-heading text-lg font-semibold text-foreground mb-4">Contact Us</h4>
-            <div className="space-y-3">
-              <a href="tel:+917001664727" className="flex items-start gap-3 text-sm text-muted-foreground hover:text-primary transition-colors">
-                <Phone className="h-4 w-4 mt-0.5 text-primary shrink-0" />
-                +91 70016 64727
+            <div className="space-y-3 w-full max-w-[280px] md:max-w-none">
+              <a href="tel:+917001664727" className="flex flex-col md:flex-row items-center md:items-start gap-2 md:gap-3 text-sm text-muted-foreground hover:text-primary transition-colors">
+                <Phone className="h-4 w-4 md:mt-0.5 text-primary shrink-0" />
+                <span>+91 70016 64727</span>
               </a>
-              <a href="tel:+917460855879" className="flex items-start gap-3 text-sm text-muted-foreground hover:text-primary transition-colors">
-                <Phone className="h-4 w-4 mt-0.5 text-primary shrink-0" />
-                +91 74608 55879
+              <a href="tel:+917460855879" className="flex flex-col md:flex-row items-center md:items-start gap-2 md:gap-3 text-sm text-muted-foreground hover:text-primary transition-colors">
+                <Phone className="h-4 w-4 md:mt-0.5 text-primary shrink-0" />
+                <span>+91 74608 55879</span>
               </a>
-              <a href="mailto:info@preemiumpestmangagement.com" className="flex items-start gap-3 text-sm text-muted-foreground hover:text-primary transition-colors">
-                <Mail className="h-4 w-4 mt-0.5 text-primary shrink-0" />
-                info@preemiumpestmangagement.com
+              <a href="mailto:info@preemiumpestmangagement.com" className="flex flex-col md:flex-row items-center md:items-start gap-2 md:gap-3 text-sm text-muted-foreground hover:text-primary transition-colors">
+                <Mail className="h-4 w-4 md:mt-0.5 text-primary shrink-0" />
+                <span className="break-all text-center md:text-left">info@preemiumpestmangagement.com</span>
               </a>
-              <div className="flex items-start gap-3 text-sm text-muted-foreground">
-                <MapPin className="h-4 w-4 mt-0.5 text-primary shrink-0" />
+              <div className="flex flex-col md:flex-row items-center md:items-start gap-2 md:gap-3 text-sm text-muted-foreground">
+                <MapPin className="h-4 w-4 md:mt-0.5 text-primary shrink-0" />
                 <span>Varanasi</span>
               </div>
             </div>
@@ -88,7 +88,7 @@ const Footer = () => {
 
       {/* Bottom bar */}
       <div className="border-t border-border bg-primary-light">
-        <div className="container mx-auto px-4 py-4 flex flex-col md:flex-row items-center justify-between gap-2">
+        <div className="container mx-auto px-4 py-4 flex flex-col md:flex-row items-center justify-between gap-4 text-center md:text-left">
           <p className="text-xs text-muted-foreground">
             © {new Date().getFullYear()} PREEMIUM Pest Management Services Pvt. Ltd. All rights reserved.
           </p>
