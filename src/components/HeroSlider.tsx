@@ -77,7 +77,7 @@ const HeroSlider = () => {
                 className="bg-gradient-primary text-primary-foreground px-8 py-3.5 rounded-full font-heading font-semibold text-sm tracking-wide hover-lift inline-flex items-center justify-center gap-2"
               >
                 <Phone className="h-4 w-4" />
-                Book Professional Inspection
+                Book Free Inspection
               </a>
               <a
                 href="https://wa.me/917001664727"
