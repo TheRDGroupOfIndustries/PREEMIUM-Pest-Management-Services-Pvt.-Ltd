@@ -40,8 +40,8 @@ const AboutSnapshot = () => {
               { icon: Leaf, title: "Eco-Friendly", desc: "Sustainable, science-driven pest management solutions" },
               { icon: FileCheck, title: "Compliance First", desc: "Fully compliant with safety & environmental standards" },
             ].map((item, i) => (
-              <div key={i} className="bg-accent rounded-xl p-6 text-center hover-lift shadow-card">
-                <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div key={i} className="bg-accent rounded-xl p-4 sm:p-6 text-center hover-lift shadow-card">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4">
                   <item.icon className="h-6 w-6 text-primary" />
                 </div>
                 <h3 className="font-heading text-sm font-semibold text-foreground mb-2">{item.title}</h3>

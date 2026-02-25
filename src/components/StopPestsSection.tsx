@@ -111,15 +111,15 @@ const StopPestsSection = () => {
                         </motion.div>
 
                         {/* Buttons */}
-                        <motion.div variants={itemVariants} className="flex flex-col sm:flex-row gap-4 pt-2">
-                            <a href="tel:+917001664727" className="inline-flex items-center justify-center bg-primary hover:bg-primary/90 transition-all text-primary-foreground rounded-lg px-6 py-4 font-semibold text-sm shadow-elevated group flex-1 hover-lift">
+                        <motion.div variants={itemVariants} className="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-2">
+                            <a href="tel:+917001664727" className="inline-flex items-center justify-center bg-primary hover:bg-primary/90 transition-all text-primary-foreground rounded-lg px-4 sm:px-6 py-3 sm:py-4 font-semibold text-sm shadow-elevated group flex-1 hover-lift">
                                 <Phone className="w-4 h-4 mr-2" />
                                 <div className="flex flex-col text-left mr-auto">
-                                    <span className="text-xs font-medium opacity-90">Call Now: +91 70016 64727</span>
+                                    <span className="text-xs font-medium opacity-90 truncate">Call: +91 70016 64727</span>
                                 </div>
-                                <ArrowRight className="w-4 h-4 ml-4 group-hover:translate-x-1 transition-transform" />
+                                <ArrowRight className="w-4 h-4 ml-2 sm:ml-4 group-hover:translate-x-1 transition-transform shrink-0" />
                             </a>
-                            <Link to="/contact" className="inline-flex items-center justify-center bg-background border-2 border-primary text-primary hover:bg-primary/5 transition-all rounded-lg px-6 py-4 font-semibold text-sm flex-1 hover-lift">
+                            <Link to="/contact" className="inline-flex items-center justify-center bg-background border-2 border-primary text-primary hover:bg-primary/5 transition-all rounded-lg px-4 sm:px-6 py-3 sm:py-4 font-semibold text-sm flex-1 hover-lift">
                                 <Clock className="w-4 h-4 mr-2" />
                                 <div className="flex flex-col text-center">
                                     <span>Book free inspection</span>
@@ -151,33 +151,33 @@ const StopPestsSection = () => {
                         viewport={{ once: true, margin: "-50px" }}
                         className="flex flex-col space-y-4"
                     >
-                        <div className="grid grid-cols-2 gap-4">
+                        <div className="grid grid-cols-2 gap-3 sm:gap-4">
                             {/* Card 1 */}
-                            <motion.div variants={itemVariants} className="bg-primary rounded-2xl p-6 text-primary-foreground shadow-elevated flex flex-col justify-center min-h-[160px] hover-lift">
-                                <Award className="w-8 h-8 mb-4 opacity-90" />
-                                <h3 className="text-4xl lg:text-5xl font-bold mb-2">30+</h3>
-                                <p className="text-sm font-medium opacity-90 leading-snug">Years Experience in Pest Control</p>
+                            <motion.div variants={itemVariants} className="bg-primary rounded-2xl p-4 sm:p-6 text-primary-foreground shadow-elevated flex flex-col justify-center min-h-[140px] sm:min-h-[160px] hover-lift">
+                                <Award className="w-6 h-6 sm:w-8 sm:h-8 mb-2 sm:mb-4 opacity-90" />
+                                <h3 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-1 sm:mb-2">30+</h3>
+                                <p className="text-[11px] sm:text-sm font-medium opacity-90 leading-snug">Years Experience</p>
                             </motion.div>
 
                             {/* Card 2 */}
-                            <motion.div variants={itemVariants} className="bg-card rounded-2xl p-6 shadow-card flex flex-col justify-center relative min-h-[160px] overflow-hidden border hover-lift">
-                                <Users className="w-8 h-8 mb-4 text-primary" />
-                                <h3 className="text-4xl lg:text-5xl font-bold mb-2 text-foreground">Same Day</h3>
-                                <p className="text-sm font-medium text-muted-foreground leading-snug pr-6">Service</p>
+                            <motion.div variants={itemVariants} className="bg-card rounded-2xl p-4 sm:p-6 shadow-card flex flex-col justify-center relative min-h-[140px] sm:min-h-[160px] overflow-hidden border hover-lift">
+                                <Users className="w-6 h-6 sm:w-8 sm:h-8 mb-2 sm:mb-4 text-primary" />
+                                <h3 className="text-2xl sm:text-4xl lg:text-5xl font-bold mb-1 sm:mb-2 text-foreground">Same Day</h3>
+                                <p className="text-[11px] sm:text-sm font-medium text-muted-foreground leading-snug">Service</p>
                             </motion.div>
 
                             {/* Card 3 */}
-                            <motion.div variants={itemVariants} className="bg-card rounded-2xl p-6 shadow-card flex flex-col justify-center min-h-[160px] border hover-lift">
-                                <Zap className="w-8 h-8 mb-4 text-primary" />
-                                <h3 className="text-4xl lg:text-5xl font-bold mb-2 text-foreground">&lt;2h</h3>
-                                <p className="text-sm font-medium text-muted-foreground leading-snug">Average Response Time</p>
+                            <motion.div variants={itemVariants} className="bg-card rounded-2xl p-4 sm:p-6 shadow-card flex flex-col justify-center min-h-[140px] sm:min-h-[160px] border hover-lift">
+                                <Zap className="w-6 h-6 sm:w-8 sm:h-8 mb-2 sm:mb-4 text-primary" />
+                                <h3 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-1 sm:mb-2 text-foreground">&lt;2h</h3>
+                                <p className="text-[11px] sm:text-sm font-medium text-muted-foreground leading-snug">Avg Response</p>
                             </motion.div>
 
                             {/* Card 4 */}
-                            <motion.div variants={itemVariants} className="bg-foreground rounded-2xl p-6 text-background shadow-elevated flex flex-col justify-center min-h-[160px] hover-lift">
-                                <ShieldCheck className="w-8 h-8 mb-4 opacity-90 text-primary" />
-                                <h3 className="text-4xl lg:text-5xl font-bold mb-2">100%</h3>
-                                <p className="text-sm font-medium opacity-90 leading-snug">Satisfaction Guarantee</p>
+                            <motion.div variants={itemVariants} className="bg-foreground rounded-2xl p-4 sm:p-6 text-background shadow-elevated flex flex-col justify-center min-h-[140px] sm:min-h-[160px] hover-lift">
+                                <ShieldCheck className="w-6 h-6 sm:w-8 sm:h-8 mb-2 sm:mb-4 opacity-90 text-primary" />
+                                <h3 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-1 sm:mb-2">100%</h3>
+                                <p className="text-[11px] sm:text-sm font-medium opacity-90 leading-snug">Satisfaction</p>
                             </motion.div>
                         </div>
 

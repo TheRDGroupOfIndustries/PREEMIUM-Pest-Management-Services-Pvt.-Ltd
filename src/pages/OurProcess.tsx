@@ -47,10 +47,10 @@ const OurProcess = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ delay: i * 0.1 }}
                   viewport={{ once: true }}
-                  className="bg-accent rounded-xl p-6 text-center shadow-card hover-lift"
+                  className="bg-accent rounded-xl p-5 sm:p-6 text-center shadow-card hover-lift"
                 >
-                  <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <item.icon className="h-6 w-6 text-primary" />
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4">
+                    <item.icon className="h-5 w-5 sm:h-6 sm:w-6 text-primary" />
                   </div>
                   <h3 className="font-heading text-sm font-semibold text-foreground mb-2">{item.title}</h3>
                   <p className="text-xs text-muted-foreground leading-relaxed">{item.desc}</p>
@@ -63,24 +63,24 @@ const OurProcess = () => {
         {/* IPM */}
         <section className="section-padding bg-accent">
           <div className="container mx-auto max-w-4xl">
-            <div className="flex items-center gap-4 mb-6">
-              <BookOpen className="h-8 w-8 text-primary" />
+            <div className="flex items-center gap-3 sm:gap-4 mb-5 sm:mb-6">
+              <BookOpen className="h-6 w-6 sm:h-8 sm:w-8 text-primary shrink-0" />
               <h2 className="font-heading text-2xl md:text-3xl font-bold text-foreground">
                 Integrated Pest Management (IPM)
               </h2>
             </div>
-            <div className="bg-background rounded-xl p-8 shadow-card">
-              <p className="text-muted-foreground leading-relaxed mb-4">
+            <div className="bg-background rounded-xl p-5 sm:p-8 shadow-card">
+              <p className="text-sm sm:text-base text-muted-foreground leading-relaxed mb-4">
                 Our Integrated Pest Management system is a comprehensive approach that combines multiple strategies
                 to achieve effective, long-term pest control while minimizing environmental impact. IPM emphasizes
                 understanding pest biology, monitoring populations, and using a combination of methods including
                 biological controls, habitat modification, and targeted chemical applications.
               </p>
-              <div className="grid sm:grid-cols-2 gap-4 mt-6">
+              <div className="grid sm:grid-cols-2 gap-3 sm:gap-4 mt-5 sm:mt-6">
                 {["Biological Control Methods", "Habitat Modification", "Targeted Chemical Application", "Continuous Monitoring", "Documentation & Reporting", "Preventive Strategies"].map((item) => (
                   <div key={item} className="flex items-center gap-2">
-                    <div className="w-2 h-2 bg-primary rounded-full shrink-0" />
-                    <span className="text-sm text-foreground">{item}</span>
+                    <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-primary rounded-full shrink-0" />
+                    <span className="text-xs sm:text-sm text-foreground">{item}</span>
                   </div>
                 ))}
               </div>

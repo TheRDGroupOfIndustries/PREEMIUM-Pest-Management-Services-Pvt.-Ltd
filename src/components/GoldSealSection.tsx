@@ -31,16 +31,16 @@ const GoldSealSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: i * 0.15 }}
               viewport={{ once: true }}
-              className="relative bg-accent rounded-xl p-8 text-center hover-lift shadow-card group"
+              className="relative bg-accent rounded-xl p-6 sm:p-8 text-center hover-lift shadow-card group"
             >
-              <div className="absolute top-4 right-4 font-heading text-4xl font-bold text-primary/10">
+              <div className="absolute top-3 right-4 font-heading text-3xl sm:text-4xl font-bold text-primary/10">
                 {i + 1}
               </div>
-              <div className="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-5 group-hover:bg-primary transition-colors">
-                <step.icon className="h-7 w-7 text-primary group-hover:text-primary-foreground transition-colors" />
+              <div className="w-12 h-12 sm:w-14 sm:h-14 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-5 group-hover:bg-primary transition-colors">
+                <step.icon className="h-6 w-6 sm:h-7 sm:w-7 text-primary group-hover:text-primary-foreground transition-colors" />
               </div>
               <h3 className="font-heading text-base font-semibold text-foreground mb-2">{step.title}</h3>
-              <p className="text-sm text-muted-foreground leading-relaxed">{step.desc}</p>
+              <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">{step.desc}</p>
             </motion.div>
           ))}
         </div>

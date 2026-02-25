@@ -56,19 +56,19 @@ const PestControl = () => {
                                 Protecting your home and business with science-driven, safe, and effective pest management strategies. Expert solutions tailored to your needs.
                             </p>
 
-                            <div className="flex flex-col sm:flex-row gap-4">
+                            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 px-4 sm:px-0">
                                 <Link
                                     to="/contact"
-                                    className="bg-primary text-primary-foreground hover:bg-primary/90 px-8 py-4 rounded-full font-heading font-semibold tracking-wide flex items-center justify-center gap-2 transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5"
+                                    className="bg-primary text-primary-foreground hover:bg-primary/90 px-6 sm:px-8 py-3.5 sm:py-4 rounded-full font-heading font-semibold tracking-wide flex items-center justify-center gap-2 transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5"
                                 >
-                                    <ShieldCheck className="w-5 h-5" />
-                                    Book Inspection Online
+                                    <ShieldCheck className="w-5 h-5 shrink-0" />
+                                    Book Inspection
                                 </Link>
                                 <a
                                     href="tel:+917001664727"
-                                    className="bg-white text-primary hover:bg-gray-50 px-8 py-4 rounded-full font-heading font-semibold tracking-wide flex items-center justify-center gap-2 transition-all shadow-lg"
+                                    className="bg-white text-primary hover:bg-gray-50 px-6 sm:px-8 py-3.5 sm:py-4 rounded-full font-heading font-semibold tracking-wide flex items-center justify-center gap-2 transition-all shadow-lg"
                                 >
-                                    <Phone className="w-5 h-5 text-primary" />
+                                    <Phone className="w-5 h-5 text-primary shrink-0" />
                                     Call +91 70016 64727
                                 </a>
                             </div>
@@ -96,19 +96,19 @@ const PestControl = () => {
                                     whileInView={{ opacity: 1, y: 0 }}
                                     viewport={{ once: true }}
                                     transition={{ delay: idx * 0.1 }}
-                                    className="bg-background rounded-2xl p-8 shadow-card border border-border/50 hover:border-primary/30 transition-colors"
+                                    className="bg-background rounded-2xl p-6 sm:p-8 shadow-card border border-border/50 hover:border-primary/30 transition-colors"
                                 >
-                                    <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6 text-primary">
-                                        <step.icon className="w-8 h-8" />
+                                    <div className="w-14 h-14 sm:w-16 sm:h-16 bg-primary/10 rounded-full flex items-center justify-center mb-5 sm:mb-6 text-primary">
+                                        <step.icon className="w-7 h-7 sm:w-8 sm:h-8" />
                                     </div>
-                                    <h3 className="font-heading text-xl font-bold mb-4">{step.title}</h3>
-                                    <p className="text-muted-foreground mb-6 leading-relaxed">
+                                    <h3 className="font-heading text-lg sm:text-xl font-bold mb-3 sm:mb-4">{step.title}</h3>
+                                    <p className="text-sm sm:text-base text-muted-foreground mb-5 sm:mb-6 leading-relaxed">
                                         {step.desc}
                                     </p>
-                                    <ul className="space-y-3">
+                                    <ul className="space-y-2 sm:space-y-3">
                                         {step.features.map((feature, fIdx) => (
-                                            <li key={fIdx} className="flex items-start gap-3 text-sm text-foreground/80 font-medium">
-                                                <CheckCircle2 className="w-5 h-5 text-primary shrink-0" />
+                                            <li key={fIdx} className="flex items-start gap-2 sm:gap-3 text-sm text-foreground/80 font-medium">
+                                                <CheckCircle2 className="w-4 h-4 sm:w-5 sm:h-5 text-primary shrink-0 mt-0.5 sm:mt-0" />
                                                 <span>{feature}</span>
                                             </li>
                                         ))}
@@ -188,19 +188,19 @@ const PestControl = () => {
                         <p className="text-primary-foreground/90 text-lg mb-8 max-w-2xl mx-auto">
                             Don't let pests take over. Connect with our experts today for a rapid response and professional assessment.
                         </p>
-                        <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
+                        <div className="flex flex-col sm:flex-row justify-center items-center gap-3 sm:gap-4 px-4 sm:px-0">
                             <a
                                 href="tel:+917001664727"
-                                className="bg-white text-primary px-8 py-4 rounded-full font-heading font-bold tracking-wide flex items-center gap-2 hover:-translate-y-1 transition-transform shadow-lg"
+                                className="w-full sm:w-auto bg-white text-primary px-6 sm:px-8 py-3.5 sm:py-4 rounded-full font-heading font-bold tracking-wide flex items-center justify-center gap-2 hover:-translate-y-1 transition-transform shadow-lg"
                             >
-                                <Phone className="w-5 h-5 bg-primary/10 p-1 rounded-full" />
+                                <Phone className="w-5 h-5 bg-primary/10 p-1 rounded-full shrink-0" />
                                 Call Toll Free: +91 70016 64727
                             </a>
                             <a
                                 href="https://wa.me/917001664727"
-                                className="bg-[#25D366] text-white px-8 py-4 rounded-full font-heading font-bold tracking-wide flex items-center gap-2 hover:-translate-y-1 transition-transform shadow-lg"
+                                className="w-full sm:w-auto bg-[#25D366] text-white px-6 sm:px-8 py-3.5 sm:py-4 rounded-full font-heading font-bold tracking-wide flex items-center justify-center gap-2 hover:-translate-y-1 transition-transform shadow-lg"
                             >
-                                <MessageCircle className="w-5 h-5" />
+                                <MessageCircle className="w-5 h-5 shrink-0" />
                                 Chat on WhatsApp
                             </a>
                         </div>

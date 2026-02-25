@@ -17,21 +17,21 @@ const FinalCTA = () => {
           <p className="text-primary-foreground/80 text-base md:text-lg mb-8 max-w-xl mx-auto">
             Get in touch with our experts for a comprehensive assessment and tailored pest management plan.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center px-4 sm:px-0">
             <a
               href="tel:+917001664727"
-              className="bg-primary-foreground text-primary px-8 py-3.5 rounded-full font-heading font-semibold text-sm tracking-wide hover-lift inline-flex items-center justify-center gap-2"
+              className="bg-primary-foreground text-primary px-6 sm:px-8 py-3.5 rounded-full font-heading font-semibold text-sm tracking-wide hover-lift inline-flex items-center justify-center gap-2"
             >
-              <Phone className="h-4 w-4" />
+              <Phone className="h-4 w-4 shrink-0" />
               Call Now
             </a>
             <a
               href="https://wa.me/917001664727"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-transparent border-2 border-primary-foreground text-primary-foreground px-8 py-3.5 rounded-full font-heading font-semibold text-sm tracking-wide hover-lift inline-flex items-center justify-center gap-2"
+              className="bg-transparent border-2 border-primary-foreground text-primary-foreground px-6 sm:px-8 py-3.5 rounded-full font-heading font-semibold text-sm tracking-wide hover-lift inline-flex items-center justify-center gap-2"
             >
-              <MessageCircle className="h-4 w-4" />
+              <MessageCircle className="h-4 w-4 shrink-0" />
               WhatsApp Chat
             </a>
           </div>
