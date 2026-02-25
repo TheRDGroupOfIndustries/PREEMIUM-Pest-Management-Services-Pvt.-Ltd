@@ -18,7 +18,7 @@ const AboutSnapshot = () => {
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-6">
               PREEMIUM Pest Management Services Pvt. Ltd. is a DPIIT-recognized professional pest management company
-              delivering science-driven, eco-friendly solutions across India for over 27 years. We combine advanced
+              delivering science-driven, eco-friendly solutions across India for over 30+ years. We combine advanced
               Integrated Pest Management (IPM) methodologies with strict regulatory compliance to protect homes,
               industries, and commercial establishments.
             </p>
