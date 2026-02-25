@@ -104,7 +104,7 @@ const StopPestsSection = () => {
                                 <MapPin className="w-5 h-5 text-primary mt-0.5 mr-3 flex-shrink-0" />
                                 <div>
                                     <h4 className="font-semibold text-sm text-foreground mb-2">Proudly Serving in Pen India:</h4>
-                                    <p className="text-sm text-muted-foreground mb-1.5"><strong className="text-foreground font-medium">Varanasi Office:</strong> 5-20/46, Varuna Bridge Varanasi 221002</p>
+                                    <p className="text-sm text-muted-foreground mb-1.5"><strong className="text-foreground font-medium">Varanasi Office:</strong> Varanasi, Uttar Pradesh, India</p>
                                 </div>
                             </div>
                         </motion.div>
