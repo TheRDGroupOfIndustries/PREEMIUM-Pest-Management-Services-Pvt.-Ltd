@@ -32,6 +32,18 @@ const reviews = [
         name: "Rahul Singh",
         location: "Gomti Nagar, Lucknow",
         initial: "R",
+    },
+    {
+        text: "Excellent service! The team was very polite and eradicated the cockroach problem completely.",
+        name: "Ananya Das",
+        location: "Dum Dum, West Bengal",
+        initial: "A",
+    },
+    {
+        text: "Very thorough inspection and effective treatment. Haven't seen a single pest since they visited.",
+        name: "Sanjay Banerjee",
+        location: "Howrah, West Bengal",
+        initial: "S",
     }
 ];
 
@@ -103,8 +115,9 @@ const StopPestsSection = () => {
                             <div className="flex items-start">
                                 <MapPin className="w-5 h-5 text-primary mt-0.5 mr-3 flex-shrink-0" />
                                 <div>
-                                    <h4 className="font-semibold text-sm text-foreground mb-2">Proudly Serving in Pen India:</h4>
-                                    <p className="text-sm text-muted-foreground mb-1.5"><strong className="text-foreground font-medium">Varanasi Office:</strong>Near Mahaveer Mandir, Varanasi, Uttar Pradesh, India</p>
+                                    <h4 className="font-semibold text-sm text-foreground mb-2">Proudly Serving:</h4>
+                                    <p className="text-sm text-muted-foreground mb-1.5"><strong className="text-foreground font-medium">Varanasi Office:</strong> S-20/46, Varuna Bridge Varanasi 221002</p>
+                                    <p className="text-sm text-muted-foreground"><strong className="text-foreground font-medium">Lucknow Office:</strong> Swiss Plaza, 2nd Floor Shop No. 205, Chaudhary Tola Aliganj, Lucknow 226024</p>
                                 </div>
                             </div>
                         </motion.div>
