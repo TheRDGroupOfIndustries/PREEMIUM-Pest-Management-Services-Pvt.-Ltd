@@ -111,13 +111,13 @@ const StopPestsSection = () => {
 
                         {/* Buttons */}
                         <motion.div variants={itemVariants} className="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-2">
-                            <a href="tel:+917001664727" className="inline-flex items-center justify-center bg-primary hover:bg-primary/90 transition-all text-primary-foreground rounded-lg px-4 sm:px-6 py-3 sm:py-4 font-semibold text-sm shadow-elevated group flex-1 hover-lift">
+                            <p className="inline-flex items-center justify-center bg-primary hover:bg-primary/90 transition-all text-primary-foreground rounded-lg px-4 sm:px-6 py-3 sm:py-4 font-semibold text-sm shadow-elevated group flex-1 hover-lift">
                                 <Phone className="w-4 h-4 mr-2" />
                                 <div className="flex flex-col text-left mr-auto">
                                     <span className="text-xs font-medium opacity-90 truncate">Call: +91 70016 64727 & +91 75608 55879</span>
                                 </div>
                                 <ArrowRight className="w-4 h-4 ml-2 sm:ml-4 group-hover:translate-x-1 transition-transform shrink-0" />
-                            </a>
+                            </p>
                             <Link to="/contact" className="inline-flex items-center justify-center bg-background border-2 border-primary text-primary hover:bg-primary/5 transition-all rounded-lg px-4 sm:px-6 py-3 sm:py-4 font-semibold text-sm flex-1 hover-lift">
                                 <Clock className="w-4 h-4 mr-2" />
                                 <div className="flex flex-col text-center">
