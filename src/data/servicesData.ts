@@ -20,7 +20,7 @@ export const servicesData: ServiceData[] = [
         id: "general-pest-management",
         title: "General Pest Management",
         icon: Bug,
-        shortDesc: "Comprehensive treatment for ants, spiders, silverfish, and common household pests using safe, approved chemicals.",
+        shortDesc: "Comprehensive treatment for ants, spiders, silverfish, cockroaches and common household pests using safe, approved chemicals.",
         category: "Both",
         content: [
             "Our General Pest Management service is designed to provide comprehensive, year-round protection against common household and commercial pests. We understand that a minor pest sighting can quickly escalate into a massive infestation, jeopardizing the health and safety of your environment.",
@@ -74,22 +74,22 @@ export const servicesData: ServiceData[] = [
         ]
     },
     {
-        id: "cockroach-management",
-        title: "Cockroach Management (GoldSeal 4D)",
+        id: "fogging-service",
+        title: "Fogging Service",
         icon: Sparkles,
-        shortDesc: "Our proprietary 4D approach: Deny Entry, Deny Shelter, Deny Food, and Eliminate for lasting cockroach control.",
+        shortDesc: "Our proprietary 4D approach: Disrupt, Displace, Destroy, Defend for fast and long-lasting relief from flying pests.",
         category: "Both",
         content: [
-            "Cockroaches are resilient survivors that breed rapidly and spread diseases like Salmonella and Gastroenteritis. Traditional chemical sprays are often ineffective against deep-rooted infestations. This is where our proprietary GoldSeal 4D approach makes the difference.",
-            "Our strategy is built on four pillars: Deny Entry, Deny Shelter, Deny Food, and Eliminate. We go beyond simple extermination by using advanced gel baits that cockroaches carry back to their nests, creating a cascading effect that wipes out the entire colony.",
-            "Coupled with deep-cleaning recommendations and the application of targeted Insect Growth Regulators (IGRs) to disrupt their breeding cycle, our cockroach management service guarantees a hygienic, roach-free environment for both kitchens and commercial food processing areas."
+            "Flying insects such as mosquitoes, flies, and gnats are more than just a nuisance—they are carriers of serious diseases like Dengue, Malaria, and Chikungunya. Conventional sprays provide only temporary relief and fail to address insects hiding in hard-to-reach areas. This is where our advanced fogging service delivers superior results.",
+            "Our approach is built on four powerful pillars: Disrupt breeding and resting zones, Displace insects from concealed spaces, Destroy active adult populations, and Defend the area against reinfestation. Using ultra-low volume (ULV) fogging technology, we disperse fine mist particles that penetrate cracks, drains, vegetation, and enclosed spaces where insects thrive.",
+            "The treatment is complemented by residual solutions that remain effective even after fogging, along with expert guidance on environmental hygiene and moisture control. Ideal for residential complexes, commercial spaces, warehouses, healthcare facilities, and outdoor areas, our fogging service ensures a safer, cleaner, and insect-free environment with rapid, visible results."
         ],
         benefits: [
-            "Advanced gel baiting technology for deep colony eradication",
-            "Application of Insect Growth Regulators (IGR) to stop breeding",
-            "Crack and crevice treatments to deny shelter",
-            "Safe for use in sensitive areas like kitchens and pantries",
-            "Zero disruption to your daily routine (no need to empty cabinets)"
+            "Ultra-low volume (ULV) fogging for total penetration of hidden spaces",
+            "Proprietary 4D approach: Disrupt, Displace, Destroy, and Defend",
+            "Rapid eradication of mosquitoes, flies, and other disease-carrying insects",
+            "Complementary application of residual solutions for extended protection",
+            "Expert advice on moisture control and hygiene to prevent reinfestation"
         ]
     },
     {
