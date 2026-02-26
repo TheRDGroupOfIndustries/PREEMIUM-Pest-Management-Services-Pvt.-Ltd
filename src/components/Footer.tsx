@@ -74,9 +74,9 @@ const Footer = () => {
                 <Phone className="h-4 w-4 md:mt-0.5 text-primary shrink-0" />
                 <span>+91 74608 55879</span>
               </a>
-              <a href="mailto:info@preemiumpestmangagement.com" className="flex flex-col md:flex-row items-center md:items-start gap-2 md:gap-3 text-sm text-muted-foreground hover:text-primary transition-colors">
+              <a href="mailto:info@preemiumpestmanagementservices.com" className="flex flex-col md:flex-row items-center md:items-start gap-2 md:gap-3 text-sm text-muted-foreground hover:text-primary transition-colors">
                 <Mail className="h-4 w-4 md:mt-0.5 text-primary shrink-0" />
-                <span className="break-all text-center md:text-left">info@preemiumpestmangagement.com</span>
+                <span className="break-all text-center md:text-left">info@preemiumpestmanagementservices.com</span>
               </a>
               <div className="flex flex-col md:flex-row items-center md:items-start gap-2 md:gap-3 text-sm text-muted-foreground">
                 <MapPin className="h-4 w-4 md:mt-0.5 text-primary shrink-0" />
