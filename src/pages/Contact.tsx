@@ -39,7 +39,7 @@ const Contact = () => {
                   {[
                     { icon: Phone, label: "Phone", value: "+91 70016 64727, +91 74608 55879", href: "tel:+917001664727" },
                     { icon: Mail, label: "Email", value: "info@preemiumpestmangagement.com", href: "mailto:info@preemiumpestmangagement.com" },
-                    { icon: MapPin, label: "Address", value: "Varanasi, Uttar Pradesh, India", href: undefined },
+                    { icon: MapPin, label: "Address", value: " S-4/50, D-2-K, Mahaveer Road, Tajpur, Infront Of Mahaveer Greens Apartment, Near Mahaveer Mandir, Varanasi Uttar Pradesh, 221102", href: undefined },
                     { icon: Clock, label: "Hours", value: "Mon – Sat: 9:00 AM – 6:00 PM", href: undefined },
                   ].map((item) => (
                     <div key={item.label} className="flex items-start gap-4">
