@@ -51,6 +51,7 @@ const Footer = () => {
                 "Commercial Fumigation",
                 "Bird Management",
                 "Weed Control",
+                "Fogging Service",
               ].map((s) => (
                 <li key={s}>
                   <Link to="/services" className="text-sm text-muted-foreground hover:text-primary transition-colors">
