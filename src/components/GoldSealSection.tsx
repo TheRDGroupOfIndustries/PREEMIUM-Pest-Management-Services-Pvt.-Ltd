@@ -15,7 +15,7 @@ const GoldSealSection = () => {
         <div className="text-center mb-12">
           <span className="text-primary font-heading text-sm font-semibold tracking-widest uppercase">Premium Service</span>
           <h2 className="font-heading text-3xl md:text-4xl font-bold text-foreground mt-2">
-            GoldSeal Service 4D
+            Service 4D
           </h2>
           <p className="text-muted-foreground mt-3 max-w-xl mx-auto">
             Our proprietary four-dimensional approach to cockroach management ensures
