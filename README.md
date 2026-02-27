@@ -1,4 +1,4 @@
-# Welcome To PREEMIUM Pest Management Services Pvt. Ltd V0.5
+# Welcome To PREEMIUM Pest Management Services Pvt. Ltd V0.6
 
 ## What technologies are used for this project?
 
