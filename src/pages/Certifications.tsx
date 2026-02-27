@@ -14,7 +14,7 @@ import cert4 from "@/assets/Primium Pest Control/certificate4.jpeg";
 const certificateImages = [
   { img: cert1, title: "Registration Certificate" },
   { img: cert2, title: "Safety Compliance" },
-  { img: cert3, title: "IPCA Membership" },
+  { img: cert3, title: "AIB Training " },
   { img: cert4, title: "Quality Assurance" },
 ];
 
