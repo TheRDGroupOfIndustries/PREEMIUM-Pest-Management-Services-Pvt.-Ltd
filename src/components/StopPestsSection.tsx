@@ -128,7 +128,7 @@ const StopPestsSection = () => {
                             <p className="inline-flex items-center justify-center bg-primary hover:bg-primary/90 transition-all text-primary-foreground rounded-lg px-4 sm:px-6 py-3 sm:py-4 font-semibold text-sm shadow-elevated group flex-1 hover-lift">
                                 <Phone className="w-4 h-4 mr-2" />
                                 <div className="flex flex-col text-left mr-auto">
-                                    <span className="text-xs font-medium opacity-90 truncate">Call: +91 70016 64727 & +91 75608 55879</span>
+                                    <span className="text-xs font-medium opacity-90 truncate">Call: +91 70016 64727 & +91 74608 55879</span>
                                 </div>
                                 <ArrowRight className="w-4 h-4 ml-2 sm:ml-4 group-hover:translate-x-1 transition-transform shrink-0" />
                             </p>
