@@ -28,6 +28,7 @@ const Footer = () => {
                 { label: "Pest Control", path: "/pest-control" },
                 { label: "Certifications", path: "/certifications" },
                 { label: "Gallery", path: "/gallery" },
+                { label: "Blog", path: "/blog" },
                 { label: "Career", path: "/career" },
                 { label: "Contact Us", path: "/contact" },
               ].map((l) => (

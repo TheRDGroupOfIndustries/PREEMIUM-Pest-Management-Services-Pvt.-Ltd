@@ -15,6 +15,9 @@ import PestControl from "./pages/PestControl";
 import PestDetail from "./pages/PestDetail";
 import ServiceDetail from "./pages/ServiceDetail";
 import NotFound from "./pages/NotFound";
+import Blog from "./pages/Blog";
+import BlogDetail from "./pages/BlogDetail";
+import Admin from "./pages/Admin";
 import ScrollToTop from "./components/ScrollToTop";
 
 const queryClient = new QueryClient();
@@ -38,6 +41,9 @@ const App = () => (
           <Route path="/pest-control" element={<PestControl />} />
           <Route path="/pest-control/:id" element={<PestDetail />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/:id" element={<BlogDetail />} />
+          <Route path="/admin/*" element={<Admin />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

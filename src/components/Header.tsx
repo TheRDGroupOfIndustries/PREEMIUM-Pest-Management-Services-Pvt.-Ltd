@@ -11,6 +11,7 @@ const navLinks = [
   // { label: "Our Process", path: "/our-process" },
   { label: "Pest Control", path: "/pest-control" },
   { label: "Gallery", path: "/gallery" },
+  { label: "Blog", path: "/blog" },
   { label: "Certifications", path: "/certifications" },
   // { label: "Career", path: "/career" },
   { label: "Contact", path: "/contact" },
