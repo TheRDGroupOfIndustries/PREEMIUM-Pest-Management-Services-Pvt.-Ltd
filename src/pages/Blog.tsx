@@ -7,6 +7,18 @@ import { Link } from "react-router-dom";
 import { client, urlFor } from "@/lib/sanity";
 import { useQuery } from "@tanstack/react-query";
 
+const toPlainText = (blocks: any[] = []) => {
+    if (!blocks) return "";
+    return blocks
+        .map((block) => {
+            if (block._type !== "block" || !block.children) {
+                return "";
+            }
+            return block.children.map((child: any) => child.text).join("");
+        })
+        .join(" ");
+};
+
 const Blog = () => {
     const { data: posts, isLoading, error } = useQuery({
         queryKey: ['posts'],
@@ -19,7 +31,7 @@ const Blog = () => {
                 mainImage,
                 categories,
                 publishedAt,
-                excerpt
+                body
             }`;
             return await client.fetch(query);
         }
@@ -125,7 +137,7 @@ const Blog = () => {
                                             </h2>
 
                                             <p className="text-muted-foreground text-sm line-clamp-3 mb-6 leading-relaxed">
-                                                {post.excerpt}
+                                                {toPlainText(post.body)}
                                             </p>
 
                                             <div className="mt-auto">

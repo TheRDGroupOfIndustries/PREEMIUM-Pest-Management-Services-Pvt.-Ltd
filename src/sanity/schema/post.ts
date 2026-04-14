@@ -41,11 +41,13 @@ export default {
             title: 'Published at',
             type: 'datetime',
         },
-        {
-            name: 'excerpt',
-            title: 'Excerpt',
-            type: 'text',
-        },
+/*
+6:         {
+7:             name: 'excerpt',
+8:             title: 'Excerpt',
+9:             type: 'text',
+10:         },
+11: */
         {
             name: 'body',
             title: 'Body',
