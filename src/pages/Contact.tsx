@@ -71,15 +71,15 @@ const Contact = () => {
 
                 {/* Map */}
                 <div className="mt-6 rounded-xl overflow-hidden border border-border shadow-card">
-                  <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d115408.097999664!2d82.90870816554735!3d25.32089491852635!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x398e2db76febcf4d%3A0x68131710853ff0b5!2sVaranasi%2C%20Uttar%20Pradesh!5e0!3m2!1sen!2sin!4v1771841131687!5m2!1sen!2sin"
+                 <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3605.550080781173!2d82.98093999999999!3d25.352874399999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x398e2d9c3bb77c43%3A0x33ad269414602ce5!2sPreemium%20Pest%20Management%20Services%20Pvt%20Ltd%20-%20Pest%20Control%20Services%20In%20Varanasi!5e0!3m2!1sen!2sin!4v1776410419477!5m2!1sen!2sin"
                     width="100%"
-                    height="250"
+                    height="300"
                     style={{ border: 0 }}
                     allowFullScreen
                     loading="lazy"
                     referrerPolicy="no-referrer-when-downgrade"
-                    title="PREEMIUM Location"
+                    title="Google Map"
                   />
                 </div>
               </div>
