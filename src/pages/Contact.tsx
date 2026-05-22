@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 import WhatsAppWidget from "@/components/WhatsAppWidget";
 import { motion } from "framer-motion";
 import { Phone, Mail, MapPin, Clock, AlertTriangle, Send } from "lucide-react";
+import { Seo } from "@/lib/seo";
 
 const Contact = () => {
   const [form, setForm] = useState({ name: "", email: "", phone: "", service: "", message: "" });
@@ -16,6 +17,11 @@ const Contact = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <Seo
+        title="Contact Pest Control Experts in Varanasi | Preemium"
+        description="Contact PREEMIUM Pest Management Services in Varanasi for termite treatment, cockroach control, rodent control, mosquito control, bed bug treatment and commercial pest control."
+        path="/contact"
+      />
       <Header />
       <main className="pt-20">
         <section className="bg-gradient-primary section-padding text-center">

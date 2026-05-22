@@ -6,19 +6,45 @@ import FinalCTA from "@/components/FinalCTA";
 import { servicesData } from "@/data/servicesData";
 import { CheckCircle2, ArrowLeft } from "lucide-react";
 import { motion } from "framer-motion";
+import { Seo, faqJsonLd, serviceJsonLd } from "@/lib/seo";
 
 const ServiceDetail = () => {
     const { id } = useParams<{ id: string }>();
-    const service = servicesData.find((s) => s.id === id);
+    const service = servicesData.find((s) => s.id === id || s.seoSlug === id);
 
     if (!service) {
         return <Navigate to="/services" replace />;
     }
 
+    if (id === service.id) {
+        return <Navigate to={`/services/${service.seoSlug}`} replace />;
+    }
+
     const Icon = service.icon;
+    const servicePath = `/services/${service.seoSlug}`;
+    const serviceFaqs = [
+        {
+            question: `Do you provide ${service.title.toLowerCase()} in Varanasi?`,
+            answer: `Yes, PREEMIUM provides ${service.title.toLowerCase()} in Varanasi for homes, offices, industries and commercial spaces.`,
+        },
+        {
+            question: "How can I book an inspection?",
+            answer: "You can book an inspection by calling +91 70016 64727 or using the WhatsApp button on the website.",
+        },
+        {
+            question: "Are the treatments safe for families and businesses?",
+            answer: "Our technicians use approved treatment methods and explain all preparation and safety steps before service.",
+        },
+    ];
 
     return (
         <div className="min-h-screen bg-background">
+            <Seo
+                title={service.seoTitle}
+                description={service.seoDescription}
+                path={servicePath}
+                jsonLd={[serviceJsonLd(service.title, service.seoDescription, servicePath), faqJsonLd(serviceFaqs)]}
+            />
             <Header />
             <main className="pt-20">
                 {/* Breadcrumb & Hero */}
@@ -39,7 +65,7 @@ const ServiceDetail = () => {
                                     animate={{ opacity: 1, y: 0 }}
                                     className="font-heading text-4xl md:text-5xl font-bold mb-4"
                                 >
-                                    {service.title}
+                                    {service.title} in Varanasi
                                 </motion.h1>
                                 <motion.p
                                     initial={{ opacity: 0, y: 20 }}
@@ -81,6 +107,16 @@ const ServiceDetail = () => {
                                     </li>
                                 ))}
                             </ul>
+                        </div>
+
+                        <div className="space-y-5 mb-12">
+                            <h3 className="text-2xl font-bold font-heading text-foreground">FAQs</h3>
+                            {serviceFaqs.map((faq) => (
+                                <div key={faq.question} className="border-b border-border pb-4">
+                                    <h4 className="font-heading text-lg font-semibold text-foreground mb-2">{faq.question}</h4>
+                                    <p className="text-muted-foreground leading-relaxed">{faq.answer}</p>
+                                </div>
+                            ))}
                         </div>
 
                         {/* CTA */}

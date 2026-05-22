@@ -1,14 +1,18 @@
 import {
     Bug, Rat, TreeDeciduous, Bird, Flame, SprayCan,
-    ShieldAlert, Snail, Flower2, Waves, Sparkles, Target
+    ShieldAlert, Snail, Flower2, Waves, Sparkles, Target,
+    type LucideIcon
 } from "lucide-react";
 
 export type ServiceCategory = "Residential" | "Commercial";
 
 export interface ServiceData {
     id: string;
+    seoSlug: string;
     title: string;
-    icon: any; // Lucide icon type
+    seoTitle: string;
+    seoDescription: string;
+    icon: LucideIcon;
     shortDesc: string;
     category: ServiceCategory | "Both";
     content: string[];
@@ -18,7 +22,10 @@ export interface ServiceData {
 export const servicesData: ServiceData[] = [
     {
         id: "general-pest-management",
+        seoSlug: "pest-control-services-varanasi",
         title: "General Pest Management",
+        seoTitle: "Pest Control Services in Varanasi | Preemium",
+        seoDescription: "Book safe pest control services in Varanasi for ants, cockroaches, spiders, silverfish and common pests. 30+ years of trusted PREEMIUM expertise.",
         icon: Bug,
         shortDesc: "Comprehensive treatment for ants, spiders, silverfish, cockroaches and common household pests using safe, approved chemicals.",
         category: "Both",
@@ -37,7 +44,10 @@ export const servicesData: ServiceData[] = [
     },
     {
         id: "termite-management",
+        seoSlug: "termite-treatment-varanasi",
         title: "Termite Management",
+        seoTitle: "Termite Treatment in Varanasi | Preemium",
+        seoDescription: "Protect your property with pre and post-construction termite treatment in Varanasi. PREEMIUM offers drill-fill-seal anti-termite solutions.",
         icon: Target,
         shortDesc: "Pre and post-construction anti-termite treatments to protect your property from structural damage.",
         category: "Both",
@@ -56,7 +66,10 @@ export const servicesData: ServiceData[] = [
     },
     {
         id: "rodent-management",
+        seoSlug: "rodent-control-varanasi",
         title: "Rodent Management",
+        seoTitle: "Rodent Control in Varanasi | Preemium",
+        seoDescription: "Get professional rat and mouse control in Varanasi with baiting, trapping and exclusion plans for homes, shops, hotels and offices.",
         icon: Rat,
         shortDesc: "Strategic baiting, trapping, and exclusion to eliminate rodent infestations from residential premises.",
         category: "Both",
@@ -75,7 +88,10 @@ export const servicesData: ServiceData[] = [
     },
     {
         id: "fogging-service",
+        seoSlug: "fogging-service-varanasi",
         title: "Fogging Service",
+        seoTitle: "Mosquito Fogging Service in Varanasi | Preemium",
+        seoDescription: "Book mosquito and fly fogging service in Varanasi with PREEMIUM's 4D approach for homes, societies, hotels, hospitals and outdoor areas.",
         icon: Sparkles,
         shortDesc: "Our proprietary 4D approach: Disrupt, Displace, Destroy, Defend for fast and long-lasting relief from flying pests.",
         category: "Both",
@@ -94,7 +110,10 @@ export const servicesData: ServiceData[] = [
     },
     {
         id: "mosquito-fly-control",
+        seoSlug: "mosquito-control-varanasi",
         title: "Mosquito & Fly Control",
+        seoTitle: "Mosquito Control in Varanasi | Preemium",
+        seoDescription: "Professional mosquito and fly control in Varanasi using larvicide, residual treatment, fogging and hygiene-focused pest management.",
         icon: Waves,
         shortDesc: "Larvicidal, adulticidal, and fogging treatments for effective mosquito and fly management.",
         category: "Both",
@@ -113,7 +132,10 @@ export const servicesData: ServiceData[] = [
     },
     {
         id: "bed-bug-management",
+        seoSlug: "bed-bug-treatment-varanasi",
         title: "Bed Bug Management",
+        seoTitle: "Bed Bug Treatment in Varanasi | Preemium",
+        seoDescription: "Remove bed bugs from homes, hotels and hostels in Varanasi with PREEMIUM's detailed inspection, chemical treatment and follow-up plan.",
         icon: ShieldAlert,
         shortDesc: "Specialized heat and chemical treatments for complete elimination of bed bug infestations.",
         category: "Both",
@@ -132,7 +154,10 @@ export const servicesData: ServiceData[] = [
     },
     {
         id: "commercial-fumigation",
+        seoSlug: "commercial-fumigation-varanasi",
         title: "Commercial Fumigation",
+        seoTitle: "Commercial Fumigation in Varanasi | Preemium",
+        seoDescription: "FSSAI and export-focused commercial fumigation in Varanasi for warehouses, commodities, containers and industrial pest control needs.",
         icon: Flame,
         shortDesc: "Warehouse, commodity, and container fumigation compliant with FSSAI and export standards.",
         category: "Commercial",
@@ -151,7 +176,10 @@ export const servicesData: ServiceData[] = [
     },
     {
         id: "bird-management",
+        seoSlug: "bird-control-varanasi",
         title: "Bird Management Solutions",
+        seoTitle: "Bird Control Services in Varanasi | Preemium",
+        seoDescription: "Humane bird control in Varanasi with netting, spikes, wire systems and long-term bird deterrent solutions for homes and businesses.",
         icon: Bird,
         shortDesc: "Humane bird deterrent systems including netting, spikes, wire systems, and ultrasonic devices.",
         category: "Commercial",
@@ -170,7 +198,10 @@ export const servicesData: ServiceData[] = [
     },
     {
         id: "snake-bee-management",
+        seoSlug: "snake-bee-control-varanasi",
         title: "Snake & Bee Management",
+        seoTitle: "Snake and Bee Control in Varanasi | Preemium",
+        seoDescription: "Emergency snake and bee control in Varanasi with safe capture, removal, relocation and preventive measures by trained professionals.",
         icon: SprayCan,
         shortDesc: "Safe capture, relocation, and preventive measures for snakes, bees, and wasps.",
         category: "Commercial",
@@ -189,7 +220,10 @@ export const servicesData: ServiceData[] = [
     },
     {
         id: "spider-lizard-control",
+        seoSlug: "spider-lizard-control-varanasi",
         title: "Spider & Lizard Control",
+        seoTitle: "Spider and Lizard Control in Varanasi | Preemium",
+        seoDescription: "Targeted spider and lizard control in Varanasi with web removal, perimeter treatment and prevention advice for homes and workplaces.",
         icon: Snail,
         shortDesc: "Targeted treatment programs for spider web removal and lizard habitation prevention.",
         category: "Commercial",
@@ -208,7 +242,10 @@ export const servicesData: ServiceData[] = [
     },
     {
         id: "weed-control",
+        seoSlug: "weed-control-varanasi",
         title: "Weed Control & Vegetation",
+        seoTitle: "Industrial Weed Control in Varanasi | Preemium",
+        seoDescription: "Industrial weed control and vegetation management in Varanasi for factories, railways, solar farms, open plots and commercial sites.",
         icon: TreeDeciduous,
         shortDesc: "Industrial vegetation management for factories, railways, solar farms, and open areas.",
         category: "Commercial",
@@ -227,7 +264,10 @@ export const servicesData: ServiceData[] = [
     },
     {
         id: "garden-pest-management",
+        seoSlug: "garden-pest-control-varanasi",
         title: "Garden Pest Management",
+        seoTitle: "Garden Pest Control in Varanasi | Preemium",
+        seoDescription: "Garden and landscape pest control in Varanasi for residential societies, corporate campuses and ornamental plant protection.",
         icon: Flower2,
         shortDesc: "Landscape and horticultural pest treatments for corporate campuses and residential societies.",
         category: "Commercial",

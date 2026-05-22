@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Phone, Mail, MapPin } from "lucide-react";
 import logo from "@/assets/logo.jpeg";
+import { servicesData } from "@/data/servicesData";
 
 const Footer = () => {
   return (
@@ -45,18 +46,10 @@ const Footer = () => {
           <div className="text-center md:text-left">
             <h4 className="font-heading text-lg font-semibold text-foreground mb-4">Our Services</h4>
             <ul className="space-y-2">
-              {[
-                "General Pest Management",
-                "Termite Management",
-                "Rodent Management",
-                "Commercial Fumigation",
-                "Bird Management",
-                "Weed Control",
-                "Fogging Service",
-              ].map((s) => (
-                <li key={s}>
-                  <Link to="/services" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                    {s}
+              {servicesData.slice(0, 7).map((s) => (
+                <li key={s.id}>
+                  <Link to={`/services/${s.seoSlug}`} className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                    {s.title}
                   </Link>
                 </li>
               ))}

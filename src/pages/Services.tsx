@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { servicesData } from "@/data/servicesData";
 import { Leaf, Home, Building2 } from "lucide-react";
+import { Seo } from "@/lib/seo";
 
 // Filter services by category for different sections
 const residentialServices = servicesData.filter(s => s.category === "Residential" || s.category === "Both");
@@ -14,6 +15,11 @@ const commercialServices = servicesData.filter(s => s.category === "Commercial" 
 const Services = () => {
   return (
     <div className="min-h-screen bg-background">
+      <Seo
+        title="Pest Control Services in Varanasi | Termite, Bed Bug, Rodent"
+        description="Explore PREEMIUM pest control services in Varanasi, including termite treatment, cockroach control, rodent control, mosquito control, bed bug treatment and commercial fumigation."
+        path="/services"
+      />
       <Header />
       <main className="pt-20">
         {/* Hero */}
@@ -47,7 +53,7 @@ const Services = () => {
                   viewport={{ once: true }}
                 >
                   <Link
-                    to={`/services/${s.id}`}
+                    to={`/services/${s.seoSlug}`}
                     className="block bg-accent rounded-xl p-6 shadow-card hover-lift border border-border/50 h-full group"
                   >
                     <div className="w-11 h-11 bg-primary/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
@@ -81,7 +87,7 @@ const Services = () => {
                   viewport={{ once: true }}
                 >
                   <Link
-                    to={`/services/${s.id}`}
+                    to={`/services/${s.seoSlug}`}
                     className="block bg-background rounded-xl p-6 shadow-card hover-lift border border-border/50 h-full group"
                   >
                     <div className="w-11 h-11 bg-primary/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-primary group-hover:text-primary-foreground transition-colors">

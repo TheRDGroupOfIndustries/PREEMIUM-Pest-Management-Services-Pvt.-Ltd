@@ -7,6 +7,7 @@ import { Shield, Sparkles, Home, Phone, MessageCircle, ArrowRight, ShieldCheck, 
 
 import { pestData } from "@/data/pestData";
 import heroImg from "@/assets/Primium Pest Control/image7.jpeg";
+import { Seo } from "@/lib/seo";
 
 const processSteps = [
     {
@@ -32,6 +33,11 @@ const processSteps = [
 const PestControl = () => {
     return (
         <div className="min-h-screen bg-background font-body">
+            <Seo
+                title="Pest Control in Varanasi | Home & Commercial Pest Experts"
+                description="Get pest control in Varanasi for homes, offices, hotels, hospitals and industries. PREEMIUM handles termite, cockroach, rodent, mosquito, bed bug and commercial pest problems."
+                path="/pest-control"
+            />
             <Header />
 
             <main className="pt-[72px]">
@@ -50,7 +56,7 @@ const PestControl = () => {
                             className="max-w-2xl"
                         >
                             <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-                                Professional Pest Control Services & Solutions
+                                Professional Pest Control Services in Varanasi
                             </h1>
                             <p className="text-lg md:text-xl text-white/90 mb-8 max-w-xl leading-relaxed">
                                 Protecting your home and business with science-driven, safe, and effective pest management strategies. Expert solutions tailored to your needs.
