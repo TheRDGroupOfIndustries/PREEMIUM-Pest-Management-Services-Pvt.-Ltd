@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 
-export const SITE_URL = "https://preemiumpestmanagementservices.com";
+export const SITE_URL = "https://www.preemiumpestmanagementservices.com";
 export const BUSINESS_NAME = "PREEMIUM Pest Management Services Pvt. Ltd.";
 export const PRIMARY_PHONE = "+91 70016 64727";
 export const SECONDARY_PHONE = "+91 74608 55879";

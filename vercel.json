@@ -6,7 +6,7 @@
 			"has": [
 				{ "type": "host", "value": "preemiumpestmangagement.com" }
 			],
-			"destination": "https://preemiumpestmanagementservices.com/$1",
+			"destination": "https://www.preemiumpestmanagementservices.com/$1",
 			"permanent": true
 		},
 		{
@@ -14,7 +14,15 @@
 			"has": [
 				{ "type": "host", "value": "www.preemiumpestmangagement.com" }
 			],
-			"destination": "https://preemiumpestmanagementservices.com/$1",
+			"destination": "https://www.preemiumpestmanagementservices.com/$1",
+			"permanent": true
+		},
+		{
+			"source": "/(.*)",
+			"has": [
+				{ "type": "host", "value": "preemiumpestmanagementservices.com" }
+			],
+			"destination": "https://www.preemiumpestmanagementservices.com/$1",
 			"permanent": true
 		}
 	],
