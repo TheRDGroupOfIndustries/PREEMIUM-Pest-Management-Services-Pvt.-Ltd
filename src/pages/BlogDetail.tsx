@@ -3,7 +3,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppWidget from "@/components/WhatsAppWidget";
 import { motion } from "framer-motion";
-import { Calendar, User, ArrowLeft, Share2, MessageCircle } from "lucide-react";
+import { Calendar, User, ArrowLeft, MessageCircle } from "lucide-react";
 import { useEffect } from "react";
 import { client, urlFor } from "@/lib/sanity";
 import { useQuery } from "@tanstack/react-query";
@@ -134,6 +134,21 @@ const BlogDetail = () => {
                                         <PortableText value={post.body} />
                                     </div>
 
+                                    <div className="mt-10 rounded-2xl border border-primary/20 bg-primary/5 p-6">
+                                        <h2 className="font-heading text-2xl font-bold text-foreground mb-3">
+                                            Need General Pest Management in Varanasi?
+                                        </h2>
+                                        <p className="text-muted-foreground leading-relaxed mb-5">
+                                            Book safe treatment for ants, cockroaches, spiders, silverfish and common household pests with PREEMIUM.
+                                        </p>
+                                        <Link
+                                            to="/services/pest-control-services-varanasi"
+                                            className="inline-flex items-center justify-center rounded-lg bg-primary px-6 py-3 font-semibold text-primary-foreground hover:bg-primary/90 transition-colors"
+                                        >
+                                            View Service Page
+                                        </Link>
+                                    </div>
+
                                 </div>
                             </motion.div>
 
@@ -181,10 +196,10 @@ const BlogDetail = () => {
                                             Get a free inspection and customized quote from our experts.
                                         </p>
                                         <Link 
-                                            to="/contact" 
+                                            to="/services/pest-control-services-varanasi"
                                             className="block w-full py-4 bg-white text-primary text-center rounded-2xl font-bold text-sm hover:bg-opacity-90 transition-all hover:shadow-lg"
                                         >
-                                            Book Free Consultation
+                                            Book Pest Control Service
                                         </Link>
                                     </div>
                                 </div>

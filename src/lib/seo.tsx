@@ -148,6 +148,13 @@ export const serviceJsonLd = (name: string, description: string, path: string) =
   provider: {
     "@id": `${SITE_URL}/#localbusiness`,
   },
+  aggregateRating: {
+    "@type": "AggregateRating",
+    ratingValue: "4.9",
+    reviewCount: "187",
+    bestRating: "5",
+    worstRating: "1",
+  },
   url: `${SITE_URL}${path}`,
 });
 

@@ -79,6 +79,17 @@ const Footer = () => {
             </div>
           </div>
         </div>
+
+        <div className="mt-10 overflow-hidden rounded-lg border border-border bg-background shadow-card">
+          <iframe
+            title="PREEMIUM Pest Management Varanasi service area map"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3605.550080781173!2d82.98093999999999!3d25.352874399999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x398e2d9c3bb77c43%3A0x33ad269414602ce5!2sPreemium%20Pest%20Management%20Services%20Pvt%20Ltd%20-%20Pest%20Control%20Services%20In%20Varanasi!5e0!3m2!1sen!2sin!4v1776410419477!5m2!1sen!2sin"
+            className="h-64 w-full border-0"
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            allowFullScreen
+          />
+        </div>
       </div>
 
       {/* Bottom bar */}

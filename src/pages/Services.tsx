@@ -5,7 +5,7 @@ import FinalCTA from "@/components/FinalCTA";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { servicesData } from "@/data/servicesData";
-import { Leaf, Home, Building2 } from "lucide-react";
+import { ArrowRight, Leaf, Home, Building2 } from "lucide-react";
 import { Seo } from "@/lib/seo";
 
 // Filter services by category for different sections
@@ -54,13 +54,17 @@ const Services = () => {
                 >
                   <Link
                     to={`/services/${s.seoSlug}`}
-                    className="block bg-accent rounded-xl p-6 shadow-card hover-lift border border-border/50 h-full group"
+                    className="flex h-full flex-col bg-accent rounded-xl p-6 shadow-card hover-lift border border-border/50 group"
                   >
                     <div className="w-11 h-11 bg-primary/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
                       <s.icon className="h-5 w-5 text-primary group-hover:text-primary-foreground transition-colors" />
                     </div>
                     <h3 className="font-heading text-sm font-semibold text-foreground mb-2">{s.title}</h3>
                     <p className="text-xs text-muted-foreground leading-relaxed">{s.shortDesc}</p>
+                    <span className="mt-auto pt-5 inline-flex items-center gap-2 text-xs font-semibold text-primary">
+                      Learn more
+                      <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+                    </span>
                   </Link>
                 </motion.div>
               ))}
@@ -88,13 +92,17 @@ const Services = () => {
                 >
                   <Link
                     to={`/services/${s.seoSlug}`}
-                    className="block bg-background rounded-xl p-6 shadow-card hover-lift border border-border/50 h-full group"
+                    className="flex h-full flex-col bg-background rounded-xl p-6 shadow-card hover-lift border border-border/50 group"
                   >
                     <div className="w-11 h-11 bg-primary/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
                       <s.icon className="h-5 w-5 text-primary group-hover:text-primary-foreground transition-colors" />
                     </div>
                     <h3 className="font-heading text-sm font-semibold text-foreground mb-2">{s.title}</h3>
                     <p className="text-xs text-muted-foreground leading-relaxed">{s.shortDesc}</p>
+                    <span className="mt-auto pt-5 inline-flex items-center gap-2 text-xs font-semibold text-primary">
+                      Learn more
+                      <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+                    </span>
                   </Link>
                 </motion.div>
               ))}

@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { servicesData } from "@/data/servicesData";
 
@@ -23,14 +24,18 @@ const ServicesGrid = () => {
               viewport={{ once: true }}
             >
               <Link
-                to={`/services/${s.id}`}
-                className="block bg-background rounded-xl p-6 shadow-card hover-lift h-full border border-border/50 group"
+                to={`/services/${s.seoSlug}`}
+                className="flex h-full flex-col bg-background rounded-xl p-6 shadow-card hover-lift border border-border/50 group"
               >
                 <div className="w-11 h-11 bg-primary/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
                   <s.icon className="h-5 w-5 text-primary group-hover:text-primary-foreground transition-colors" />
                 </div>
                 <h3 className="font-heading text-sm font-semibold text-foreground mb-2">{s.title}</h3>
                 <p className="text-xs text-muted-foreground leading-relaxed">{s.shortDesc}</p>
+                <span className="mt-auto pt-5 inline-flex items-center gap-2 text-xs font-semibold text-primary">
+                  Learn more
+                  <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+                </span>
               </Link>
             </motion.div>
           ))}
