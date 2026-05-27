@@ -4,6 +4,7 @@ import WhatsAppWidget from "@/components/WhatsAppWidget";
 import FinalCTA from "@/components/FinalCTA";
 import { motion } from "framer-motion";
 import { ShieldCheck, Award, Handshake, BadgeCheck, Leaf, FileCheck, FileText } from "lucide-react";
+import { Seo } from "@/lib/seo";
 
 // Certificate Images
 import cert1 from "@/assets/Primium Pest Control/certificate1.png";
@@ -54,6 +55,11 @@ const certifications = [
 const Certifications = () => {
   return (
     <div className="min-h-screen bg-background">
+      <Seo
+        title="Pest Control Certifications & Compliance | PREEMIUM Varanasi"
+        description="View PREEMIUM Pest Management certifications, DPIIT recognition, IPCA membership, BNI membership, safety standards and compliance documents."
+        path="/certifications"
+      />
       <Header />
       <main className="pt-20">
         <section className="bg-gradient-primary section-padding text-center">

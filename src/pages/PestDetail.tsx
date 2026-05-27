@@ -6,6 +6,7 @@ import FinalCTA from "@/components/FinalCTA";
 import { pestData } from "@/data/pestData";
 import { CheckCircle2, ArrowLeft } from "lucide-react";
 import { motion } from "framer-motion";
+import { Seo } from "@/lib/seo";
 
 const PestDetail = () => {
     const { id } = useParams<{ id: string }>();
@@ -17,6 +18,12 @@ const PestDetail = () => {
 
     return (
         <div className="min-h-screen bg-background">
+            <Seo
+                title={`${pest.title} Control in Varanasi | Pest Guide`}
+                description={`${pest.shortDesc} Learn signs, risks and professional treatment options for ${pest.title.toLowerCase()} in Varanasi.`}
+                path={`/pest-control/${pest.id}`}
+                image={pest.image}
+            />
             <Header />
             <main className="pt-20">
                 {/* Breadcrumb & Hero */}

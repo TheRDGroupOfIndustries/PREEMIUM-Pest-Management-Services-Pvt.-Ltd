@@ -2,10 +2,17 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppWidget from "@/components/WhatsAppWidget";
 import { Briefcase } from "lucide-react";
+import { Seo } from "@/lib/seo";
 
 const Career = () => {
     return (
         <div className="min-h-screen bg-background flex flex-col">
+            <Seo
+                title="Careers at PREEMIUM Pest Management"
+                description="Career opportunities at PREEMIUM Pest Management Services. This page is being prepared and will be updated with open roles."
+                path="/career"
+                noIndex
+            />
             <Header />
             <main className="flex-1 pt-20 flex items-center justify-center">
                 <section className="section-padding text-center w-full">

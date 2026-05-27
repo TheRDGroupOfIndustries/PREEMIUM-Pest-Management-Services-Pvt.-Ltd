@@ -6,10 +6,16 @@ import ERDMSection from "@/components/ERDMSection";
 import GoldSealSection from "@/components/GoldSealSection";
 import { motion } from "framer-motion";
 import { ShieldCheck, BookOpen, GraduationCap, ClipboardList, Leaf } from "lucide-react";
+import { Seo } from "@/lib/seo";
 
 const OurProcess = () => {
   return (
     <div className="min-h-screen bg-background">
+      <Seo
+        title="Our Pest Control Process in Varanasi | ERDM & IPM"
+        description="See PREEMIUM's science-driven pest control process in Varanasi, including ERDM, Integrated Pest Management, safety protocols, training and service reporting."
+        path="/our-process"
+      />
       <Header />
       <main className="pt-20">
         <section className="bg-gradient-primary section-padding text-center">

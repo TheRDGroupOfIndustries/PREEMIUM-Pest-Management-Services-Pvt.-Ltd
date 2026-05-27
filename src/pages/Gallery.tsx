@@ -2,6 +2,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppWidget from "@/components/WhatsAppWidget";
 import { motion } from "framer-motion";
+import { Seo } from "@/lib/seo";
 
 // Gallery Images
 import img1 from "@/assets/Primium Pest Control/image1.jpeg";
@@ -30,6 +31,11 @@ const galleryImages = [
 const Gallery = () => {
     return (
         <div className="min-h-screen bg-background">
+            <Seo
+                title="Pest Control Service Gallery in Varanasi | PREEMIUM"
+                description="View PREEMIUM Pest Management service photos, pest control operations and professional treatment work across Varanasi."
+                path="/gallery"
+            />
             <Header />
             <main className="pt-20">
                 <section className="bg-gradient-primary section-padding text-center">

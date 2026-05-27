@@ -7,6 +7,7 @@ import {
   Factory, Warehouse, Pill, UtensilsCrossed,
   Building2, Monitor, Home, Landmark,
 } from "lucide-react";
+import { Seo } from "@/lib/seo";
 
 const industries = [
   { icon: Factory, title: "Manufacturing", challenges: "Product contamination, equipment damage, health code violations", solutions: "Scheduled IPM programs, perimeter defense systems, ERDM methodology" },
@@ -22,6 +23,11 @@ const industries = [
 const Industries = () => {
   return (
     <div className="min-h-screen bg-background">
+      <Seo
+        title="Pest Management for Industries in Varanasi | PREEMIUM"
+        description="Industry-specific pest management in Varanasi for manufacturing, warehouses, pharma, food processing, hotels, offices, societies and PSU facilities."
+        path="/industries"
+      />
       <Header />
       <main className="pt-20">
         <section className="bg-gradient-primary section-padding text-center">
