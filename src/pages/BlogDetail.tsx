@@ -8,6 +8,23 @@ import { useEffect } from "react";
 import { client, urlFor } from "@/lib/sanity";
 import { useQuery } from "@tanstack/react-query";
 import { PortableText } from "@portabletext/react";
+import { BUSINESS_NAME, SITE_URL, Seo } from "@/lib/seo";
+
+const toPlainText = (blocks: any[] = []) => {
+    if (!blocks) return "";
+    return blocks
+        .map((block) => {
+            if (block._type !== "block" || !block.children) {
+                return "";
+            }
+            return block.children.map((child: any) => child.text).join("");
+        })
+        .join(" ")
+        .replace(/\s+/g, " ")
+        .trim();
+};
+
+const getPostSlug = (post: any) => post?.slug?.current || post?._id;
 
 const BlogDetail = () => {
     const { id } = useParams<{ id: string }>();
@@ -16,7 +33,7 @@ const BlogDetail = () => {
     const { data: post, isLoading, error } = useQuery({
         queryKey: ['post', id],
         queryFn: async () => {
-            const query = `*[_type == "post" && _id == $id][0] {
+            const query = `*[_type == "post" && (_id == $id || slug.current == $id)][0] {
                 _id,
                 title,
                 slug,
@@ -25,9 +42,10 @@ const BlogDetail = () => {
                 categories,
                 publishedAt,
                 body,
-                "related": *[_type == "post" && _id != $id] | order(publishedAt desc) [0...2] {
+                "related": *[_type == "post" && _id != ^._id] | order(publishedAt desc) [0...2] {
                     _id,
                     title,
+                    slug,
                     mainImage,
                     publishedAt,
                     categories
@@ -41,6 +59,13 @@ const BlogDetail = () => {
     useEffect(() => {
         window.scrollTo(0, 0);
     }, [id]);
+
+    useEffect(() => {
+        const slug = getPostSlug(post);
+        if (post && slug && id !== slug) {
+            navigate(`/blog/${slug}`, { replace: true });
+        }
+    }, [id, navigate, post]);
 
     if (isLoading) {
         return (
@@ -62,9 +87,47 @@ const BlogDetail = () => {
     }
 
     const relatedPosts = post.related || [];
+    const postSlug = getPostSlug(post);
+    const postPath = `/blog/${postSlug}`;
+    const postDescription =
+        toPlainText(post.body).slice(0, 155) ||
+        `Read ${post.title} from ${BUSINESS_NAME}.`;
+    const postImage = post.mainImage ? urlFor(post.mainImage).url() : "/favicon.jpeg";
+    const blogPostJsonLd = {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        headline: post.title,
+        description: postDescription,
+        image: postImage.startsWith("http") ? postImage : `${SITE_URL}${postImage}`,
+        datePublished: post.publishedAt,
+        dateModified: post.publishedAt,
+        author: {
+            "@type": "Person",
+            name: post.author || BUSINESS_NAME,
+        },
+        publisher: {
+            "@type": "Organization",
+            name: BUSINESS_NAME,
+            logo: {
+                "@type": "ImageObject",
+                url: `${SITE_URL}/favicon.jpeg`,
+            },
+        },
+        mainEntityOfPage: {
+            "@type": "WebPage",
+            "@id": `${SITE_URL}${postPath}`,
+        },
+    };
 
     return (
         <div className="min-h-screen bg-background text-foreground">
+            <Seo
+                title={`${post.title} | Pest Control Blog`}
+                description={postDescription}
+                path={postPath}
+                image={postImage}
+                jsonLd={blogPostJsonLd}
+            />
             <Header />
             <main className="pt-20">
                 {/* Hero Section */}
@@ -164,7 +227,7 @@ const BlogDetail = () => {
                                         {relatedPosts.map((rp: any) => (
                                             <Link 
                                                 key={rp._id} 
-                                                to={`/blog/${rp._id}`}
+                                                to={`/blog/${getPostSlug(rp)}`}
                                                 className="group flex gap-4"
                                             >
                                                 <div className="shrink-0 w-20 h-20 rounded-xl overflow-hidden">

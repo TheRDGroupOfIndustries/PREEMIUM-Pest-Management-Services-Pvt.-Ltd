@@ -9,7 +9,7 @@ import hero3 from "@/assets/Primium Pest Control/image8.jpeg";
 const slides = [
   {
     image: hero1,
-    headline: "Best Pest Control Services in Varanasi",
+    headline: "Professional Pest Control Services in Varanasi",
     subheadline: "Science-driven termite, cockroach, rodent, mosquito and bed bug treatment for homes, industries and businesses",
   },
   {

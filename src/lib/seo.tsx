@@ -10,7 +10,7 @@ export const BUSINESS_ADDRESS =
   "S-4/50, D-2-K, Mahaveer Road, Tajpur, Infront Of Mahaveer Greens Apartment, Near Mahaveer Mandir, Varanasi, Uttar Pradesh 221102";
 
 const DEFAULT_TITLE =
-  "Best Pest Control Services in Varanasi | Preemium";
+  "Pest Control Services in Varanasi | Preemium";
 const DEFAULT_DESCRIPTION =
   "Book professional pest control services in Varanasi with PREEMIUM. 30+ years of safe termite, cockroach, rodent, mosquito and bed bug treatment for homes and businesses.";
 

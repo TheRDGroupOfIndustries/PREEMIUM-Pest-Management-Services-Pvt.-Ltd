@@ -6,6 +6,7 @@ import { Calendar, User, ArrowRight, BookOpen } from "lucide-react";
 import { Link } from "react-router-dom";
 import { client, urlFor } from "@/lib/sanity";
 import { useQuery } from "@tanstack/react-query";
+import { Seo } from "@/lib/seo";
 
 const toPlainText = (blocks: any[] = []) => {
     if (!blocks) return "";
@@ -18,6 +19,8 @@ const toPlainText = (blocks: any[] = []) => {
         })
         .join(" ");
 };
+
+const getPostSlug = (post: any) => post?.slug?.current || post?._id;
 
 const Blog = () => {
     const { data: posts, isLoading, error } = useQuery({
@@ -62,6 +65,11 @@ const Blog = () => {
 
     return (
         <div className="min-h-screen bg-background text-foreground">
+            <Seo
+                title="Pest Control Blog in Varanasi | Expert Tips & Guides"
+                description="Read expert pest control articles for Varanasi homes and businesses, including termite treatment, mosquito management, cockroach control, rodent prevention and bed bug removal."
+                path="/blog"
+            />
             <Header />
             <main className="pt-20">
                 {/* Hero Section */}
@@ -142,7 +150,7 @@ const Blog = () => {
 
                                             <div className="mt-auto">
                                                 <Link
-                                                    to={`/blog/${post._id}`}
+                                                    to={`/blog/${getPostSlug(post)}`}
                                                     className="inline-flex items-center gap-2 text-primary font-semibold text-sm group/btn hover:gap-3 transition-all"
                                                 >
                                                     Read More
