@@ -2,6 +2,21 @@
 {
 	"redirects": [
 		{
+			"source": "/blog/1488ae35-1148-424b-877c-3f1c27302332",
+			"destination": "/blog/smart-tips-for-hiring-pest-control-in-varanasi",
+			"permanent": true
+		},
+		{
+			"source": "/blog/ea068a14-fbd0-4436-bfae-5ae8cd1ed67e",
+			"destination": "/blog/best-pest-control-services-in-varanasi-guide",
+			"permanent": true
+		},
+		{
+			"source": "/blog/0e0917b0-c799-4636-9c64-b241b7baafbb",
+			"destination": "/blog/termite-control-in-varanasi-protect-your-home",
+			"permanent": true
+		},
+		{
 			"source": "/(.*)",
 			"has": [
 				{ "type": "host", "value": "preemiumpestmangagement.com" }
@@ -28,5 +43,19 @@
 	],
 	"rewrites": [
 		{"source":"/(.*)", "destination": "/"}
+	],
+	"headers": [
+		{
+			"source": "/(.*)",
+			"headers": [
+				{ "key": "X-Content-Type-Options", "value": "nosniff" },
+				{ "key": "X-Frame-Options", "value": "SAMEORIGIN" },
+				{ "key": "X-XSS-Protection", "value": "1; mode=block" },
+				{ "key": "Strict-Transport-Security", "value": "max-age=31536000; includeSubDomains; preload" },
+				{ "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
+				{ "key": "Permissions-Policy", "value": "camera=(), microphone=(), geolocation=()" },
+				{ "key": "Content-Security-Policy", "value": "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: blob: https:; connect-src 'self' https:; frame-src https://www.google.com https://www.google.com/maps/; object-src 'none'; base-uri 'self'; frame-ancestors 'self';" }
+			]
+		}
 	]
-} 
+}

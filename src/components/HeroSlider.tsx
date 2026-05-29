@@ -48,7 +48,7 @@ const HeroSlider = () => {
         >
           <img
             src={slides[current].image}
-            alt={slides[current].headline}
+            alt={`${slides[current].headline} service background`}
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0" style={{ background: "var(--gradient-hero-overlay)" }} />

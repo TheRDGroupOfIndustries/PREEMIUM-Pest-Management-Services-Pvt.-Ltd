@@ -31,7 +31,7 @@ const PestDetail = () => {
                     <div className="absolute inset-0 z-0 bg-accent">
                         <img
                             src={pest.image}
-                            alt={pest.title}
+                            alt={`${pest.title} control treatment in Varanasi`}
                             className="w-full h-full object-cover"
                         />
                         <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-transparent"></div>

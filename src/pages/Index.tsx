@@ -21,7 +21,7 @@ const Index = () => {
     <div className="min-h-screen bg-background">
       <Seo
         title="Pest Control Services in Varanasi | Preemium"
-        description="Book professional pest control services in Varanasi with PREEMIUM. 30+ years of safe termite, cockroach, rodent, mosquito and bed bug treatment for homes and businesses."
+        description="Book pest control in Varanasi for termite, cockroach, rodent, mosquito and bed bug treatment for homes and businesses."
         path="/"
         jsonLd={localBusinessJsonLd()}
       />

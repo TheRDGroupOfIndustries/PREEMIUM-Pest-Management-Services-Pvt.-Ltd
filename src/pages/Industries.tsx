@@ -25,7 +25,7 @@ const Industries = () => {
     <div className="min-h-screen bg-background">
       <Seo
         title="Pest Management for Industries in Varanasi | PREEMIUM"
-        description="Industry-specific pest management in Varanasi for manufacturing, warehouses, pharma, food processing, hotels, offices, societies and PSU facilities."
+        description="Industry pest management in Varanasi for manufacturing, warehouses, pharma, food processing, hotels, offices and societies."
         path="/industries"
       />
       <Header />

@@ -35,7 +35,7 @@ const PestControl = () => {
         <div className="min-h-screen bg-background font-body">
             <Seo
                 title="Pest Control in Varanasi | Home & Commercial Pest Experts"
-                description="Get pest control in Varanasi for homes, offices, hotels, hospitals and industries. PREEMIUM handles termite, cockroach, rodent, mosquito, bed bug and commercial pest problems."
+                description="Get pest control in Varanasi for homes, offices, hotels, hospitals and industries, including termite, cockroach, rodent and mosquito control."
                 path="/pest-control"
             />
             <Header />
@@ -44,7 +44,7 @@ const PestControl = () => {
                 {/* 1. Hero Section */}
                 <section className="relative w-full h-[60vh] min-h-[500px] flex items-center">
                     <div className="absolute inset-0 z-0 bg-accent">
-                        <img src={heroImg} alt="Pest Control Services" className="w-full h-full object-cover" />
+                        <img src={heroImg} alt="Pest control technician treating a property" className="w-full h-full object-cover" />
                         <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-transparent z-10"></div>
                     </div>
 
@@ -150,7 +150,7 @@ const PestControl = () => {
                                     <div className="relative h-56 overflow-hidden bg-accent">
                                         <img
                                             src={service.image}
-                                            alt={service.title}
+                                            alt={`${service.title} treatment guide in Varanasi`}
                                             className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                                         />
                                         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>

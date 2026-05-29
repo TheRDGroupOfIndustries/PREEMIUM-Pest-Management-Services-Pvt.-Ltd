@@ -13,7 +13,7 @@ const OurProcess = () => {
     <div className="min-h-screen bg-background">
       <Seo
         title="Our Pest Control Process in Varanasi | ERDM & IPM"
-        description="See PREEMIUM's science-driven pest control process in Varanasi, including ERDM, Integrated Pest Management, safety protocols, training and service reporting."
+        description="See PREEMIUM's pest control process in Varanasi, including ERDM, IPM, safety protocols, training and service reporting."
         path="/our-process"
       />
       <Header />

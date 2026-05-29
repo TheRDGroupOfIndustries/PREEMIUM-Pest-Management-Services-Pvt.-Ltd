@@ -19,7 +19,7 @@ const Contact = () => {
     <div className="min-h-screen overflow-x-hidden bg-background">
       <Seo
         title="Contact Pest Control Experts in Varanasi | Preemium"
-        description="Contact PREEMIUM Pest Management Services in Varanasi for termite treatment, cockroach control, rodent control, mosquito control, bed bug treatment and commercial pest control."
+        description="Contact PREEMIUM Pest Management in Varanasi for termite, cockroach, rodent, mosquito, bed bug and commercial pest control."
         path="/contact"
       />
       <Header />

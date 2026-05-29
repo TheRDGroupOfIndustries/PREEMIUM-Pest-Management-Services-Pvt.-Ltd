@@ -142,7 +142,7 @@ const BlogDetail = () => {
                     {post.mainImage && (
                         <img
                             src={urlFor(post.mainImage).url()}
-                            alt={post.title}
+                            alt={`Featured image for ${post.title}`}
                             className="absolute inset-0 w-full h-full object-cover"
                         />
                     )}
@@ -239,7 +239,7 @@ const BlogDetail = () => {
                                             >
                                                 <div className="shrink-0 w-20 h-20 rounded-xl overflow-hidden">
                                                     {rp.mainImage && (
-                                                        <img src={urlFor(rp.mainImage).url()} alt={rp.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform" />
+                                                        <img src={urlFor(rp.mainImage).url()} alt={`${rp.title} related article image`} className="w-full h-full object-cover group-hover:scale-110 transition-transform" />
                                                     )}
                                                 </div>
                                                 <div className="flex flex-col justify-center">

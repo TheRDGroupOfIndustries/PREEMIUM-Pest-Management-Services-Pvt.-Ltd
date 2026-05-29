@@ -17,7 +17,7 @@ const Services = () => {
     <div className="min-h-screen bg-background">
       <Seo
         title="Pest Control Services in Varanasi | Termite, Bed Bug, Rodent"
-        description="Explore PREEMIUM pest control services in Varanasi, including termite treatment, cockroach control, rodent control, mosquito control, bed bug treatment and commercial fumigation."
+        description="Explore pest control services in Varanasi, including termite, cockroach, rodent, mosquito, bed bug and fumigation treatments."
         path="/services"
       />
       <Header />

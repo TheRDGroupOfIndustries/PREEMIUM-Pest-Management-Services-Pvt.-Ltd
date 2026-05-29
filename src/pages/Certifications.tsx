@@ -57,7 +57,7 @@ const Certifications = () => {
     <div className="min-h-screen bg-background">
       <Seo
         title="Pest Control Certifications & Compliance | PREEMIUM Varanasi"
-        description="View PREEMIUM Pest Management certifications, DPIIT recognition, IPCA membership, BNI membership, safety standards and compliance documents."
+        description="View PREEMIUM Pest Management certifications, DPIIT recognition, IPCA membership, safety standards and compliance documents."
         path="/certifications"
       />
       <Header />

@@ -66,7 +66,7 @@ const Blog = () => {
         <div className="min-h-screen bg-background text-foreground">
             <Seo
                 title="Pest Control Blog in Varanasi | Expert Tips & Guides"
-                description="Read expert pest control articles for Varanasi homes and businesses, including termite treatment, mosquito management, cockroach control, rodent prevention and bed bug removal."
+                description="Read pest control articles for Varanasi homes and businesses on termite treatment, mosquitoes, cockroaches, rodents and bed bugs."
                 path="/blog"
             />
             <Header />
@@ -114,7 +114,7 @@ const Blog = () => {
                                             {post.mainImage && (
                                                 <img
                                                     src={urlFor(post.mainImage).url()}
-                                                    alt={post.title}
+                                                    alt={`${post.title} blog image`}
                                                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                                                 />
                                             )}
