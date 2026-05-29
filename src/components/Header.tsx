@@ -1,8 +1,9 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, Phone } from "lucide-react";
+import { ChevronDown, Menu, Phone, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import logo from "@/assets/logo.jpeg";
+import { servicesData } from "@/data/servicesData";
 
 const navLinks = [
   { label: "Home", path: "/" },
@@ -21,6 +22,7 @@ const Header = () => {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const location = useLocation();
+  const servicesActive = location.pathname.startsWith("/services");
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
@@ -43,18 +45,68 @@ const Header = () => {
 
         {/* Desktop Nav */}
         <nav className="hidden xl:flex items-center gap-1 bg-accent border border-border/50 rounded-full p-1.5 shadow-sm mx-auto">
-          {navLinks.map((link) => (
-            <Link
-              key={link.path}
-              to={link.path}
-              className={`px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-300 ${location.pathname === link.path
-                  ? "bg-primary text-primary-foreground shadow-sm"
-                  : "text-foreground hover:bg-black/5"
-                }`}
-            >
-              {link.label}
-            </Link>
-          ))}
+          {navLinks.map((link) => {
+            if (link.path === "/services") {
+              return (
+                <div key={link.path} className="group relative">
+                  <Link
+                    to={link.path}
+                    className={`flex items-center gap-1.5 rounded-full px-5 py-2.5 text-sm font-medium transition-all duration-300 ${servicesActive
+                      ? "bg-primary text-primary-foreground shadow-sm"
+                      : "text-foreground hover:bg-black/5"
+                      }`}
+                  >
+                    {link.label}
+                    <ChevronDown className="h-3.5 w-3.5 transition-transform duration-200 group-hover:rotate-180" />
+                  </Link>
+                  <div className="invisible absolute left-1/2 top-full z-50 w-[760px] -translate-x-1/2 pt-4 opacity-0 transition-all duration-200 group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100">
+                    <div className="rounded-xl border border-border bg-background p-4 shadow-xl">
+                      <div className="mb-3 flex items-center justify-between border-b border-border pb-3">
+                        <Link to="/services" className="font-heading text-sm font-bold text-foreground hover:text-primary">
+                          All Pest Control Services
+                        </Link>
+                        <span className="text-xs text-muted-foreground">Varanasi service pages</span>
+                      </div>
+                      <div className="grid grid-cols-2 gap-2">
+                        {servicesData.map((service) => (
+                          <Link
+                            key={service.id}
+                            to={`/services/${service.seoSlug}`}
+                            className="group/item flex items-start gap-3 rounded-lg border border-transparent p-3 transition-colors hover:border-primary/20 hover:bg-accent"
+                          >
+                            <span className="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary">
+                              <service.icon className="h-4 w-4" />
+                            </span>
+                            <span className="min-w-0">
+                              <span className="block text-sm font-semibold leading-snug text-foreground group-hover/item:text-primary">
+                                {service.title}
+                              </span>
+                              <span className="mt-0.5 line-clamp-1 block text-xs text-muted-foreground">
+                                {service.shortDesc}
+                              </span>
+                            </span>
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              );
+            }
+
+            return (
+              <Link
+                key={link.path}
+                to={link.path}
+                className={`px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-300 ${location.pathname === link.path
+                    ? "bg-primary text-primary-foreground shadow-sm"
+                    : "text-foreground hover:bg-black/5"
+                  }`}
+              >
+                {link.label}
+              </Link>
+            );
+          })}
         </nav>
 
         {/* CTA */}
@@ -94,18 +146,49 @@ const Header = () => {
             className="xl:hidden bg-background border-t border-border overflow-hidden shadow-xl"
           >
             <nav className="flex flex-col p-4 gap-2">
-              {navLinks.map((link) => (
-                <Link
-                  key={link.path}
-                  to={link.path}
-                  className={`px-4 py-3 rounded-lg text-sm font-heading tracking-wide ${location.pathname === link.path
-                    ? "bg-primary text-primary-foreground"
-                    : "text-foreground hover:bg-accent"
-                    }`}
-                >
-                  {link.label}
-                </Link>
-              ))}
+              {navLinks.map((link) => {
+                if (link.path === "/services") {
+                  return (
+                    <div key={link.path} className="rounded-lg border border-border bg-accent/40 p-2">
+                      <Link
+                        to={link.path}
+                        className={`mb-2 flex items-center justify-between rounded-lg px-3 py-2.5 text-sm font-heading tracking-wide ${servicesActive
+                          ? "bg-primary text-primary-foreground"
+                          : "text-foreground hover:bg-accent"
+                          }`}
+                      >
+                        {link.label}
+                        <ChevronDown className="h-4 w-4" />
+                      </Link>
+                      <div className="grid gap-1">
+                        {servicesData.map((service) => (
+                          <Link
+                            key={service.id}
+                            to={`/services/${service.seoSlug}`}
+                            className="flex items-center gap-3 rounded-md px-3 py-2 text-sm text-foreground hover:bg-background"
+                          >
+                            <service.icon className="h-4 w-4 shrink-0 text-primary" />
+                            <span className="leading-snug">{service.title}</span>
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  );
+                }
+
+                return (
+                  <Link
+                    key={link.path}
+                    to={link.path}
+                    className={`px-4 py-3 rounded-lg text-sm font-heading tracking-wide ${location.pathname === link.path
+                      ? "bg-primary text-primary-foreground"
+                      : "text-foreground hover:bg-accent"
+                      }`}
+                  >
+                    {link.label}
+                  </Link>
+                );
+              })}
               <Link
                 to="/contact"
                 className="bg-gradient-primary text-primary-foreground px-6 py-3 rounded-full text-sm font-heading font-semibold tracking-wide text-center mt-2"
