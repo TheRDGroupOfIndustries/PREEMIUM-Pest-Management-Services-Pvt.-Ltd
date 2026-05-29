@@ -9,6 +9,7 @@ import { client, urlFor } from "@/lib/sanity";
 import { useQuery } from "@tanstack/react-query";
 import { PortableText } from "@portabletext/react";
 import { BUSINESS_NAME, SITE_URL, Seo } from "@/lib/seo";
+import { createBlogSlug, getBlogSlug } from "@/lib/blogSlug";
 
 const toPlainText = (blocks: any[] = []) => {
     if (!blocks) return "";
@@ -24,8 +25,6 @@ const toPlainText = (blocks: any[] = []) => {
         .trim();
 };
 
-const getPostSlug = (post: any) => post?.slug?.current || post?._id;
-
 const BlogDetail = () => {
     const { id } = useParams<{ id: string }>();
     const navigate = useNavigate();
@@ -33,7 +32,7 @@ const BlogDetail = () => {
     const { data: post, isLoading, error } = useQuery({
         queryKey: ['post', id],
         queryFn: async () => {
-            const query = `*[_type == "post" && (_id == $id || slug.current == $id)][0] {
+            const postFields = `{
                 _id,
                 title,
                 slug,
@@ -51,7 +50,15 @@ const BlogDetail = () => {
                     categories
                 }
             }`;
-            return await client.fetch(query, { id });
+            const query = `*[_type == "post" && (_id == $id || slug.current == $id)][0] ${postFields}`;
+            const post = await client.fetch(query, { id });
+
+            if (post) {
+                return post;
+            }
+
+            const posts = await client.fetch(`*[_type == "post"] ${postFields}`);
+            return posts.find((item: any) => createBlogSlug(item.title) === id) || null;
         },
         enabled: !!id
     });
@@ -61,7 +68,7 @@ const BlogDetail = () => {
     }, [id]);
 
     useEffect(() => {
-        const slug = getPostSlug(post);
+        const slug = getBlogSlug(post);
         if (post && slug && id !== slug) {
             navigate(`/blog/${slug}`, { replace: true });
         }
@@ -87,7 +94,7 @@ const BlogDetail = () => {
     }
 
     const relatedPosts = post.related || [];
-    const postSlug = getPostSlug(post);
+    const postSlug = getBlogSlug(post);
     const postPath = `/blog/${postSlug}`;
     const postDescription =
         toPlainText(post.body).slice(0, 155) ||
@@ -122,7 +129,7 @@ const BlogDetail = () => {
     return (
         <div className="min-h-screen bg-background text-foreground">
             <Seo
-                title={`${post.title} | Pest Control Blog`}
+                title={post.title}
                 description={postDescription}
                 path={postPath}
                 image={postImage}
@@ -227,7 +234,7 @@ const BlogDetail = () => {
                                         {relatedPosts.map((rp: any) => (
                                             <Link 
                                                 key={rp._id} 
-                                                to={`/blog/${getPostSlug(rp)}`}
+                                                to={`/blog/${getBlogSlug(rp)}`}
                                                 className="group flex gap-4"
                                             >
                                                 <div className="shrink-0 w-20 h-20 rounded-xl overflow-hidden">

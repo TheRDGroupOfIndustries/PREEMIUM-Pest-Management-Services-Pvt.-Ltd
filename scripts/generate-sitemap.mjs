@@ -26,6 +26,20 @@ const readEnv = async () => {
   }
 };
 
+const createBlogSlug = (title) => {
+  if (!title) return "";
+
+  return title
+    .normalize("NFKD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase()
+    .replace(/&/g, " and ")
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "")
+    .slice(0, 96)
+    .replace(/-+$/g, "");
+};
+
 const staticRoutes = [
   { path: "/", priority: "1.0" },
   { path: "/services", priority: "0.9" },
@@ -95,13 +109,14 @@ const fetchBlogRoutes = async () => {
 
     const posts = await client.fetch(
       `*[_type == "post" && defined(slug.current)] | order(publishedAt desc) {
+        title,
         "slug": slug.current,
         publishedAt
       }`,
     );
 
     return posts.map((post) => ({
-      path: `/blog/${post.slug}`,
+      path: `/blog/${createBlogSlug(post.title) || post.slug}`,
       priority: "0.7",
       lastmod: post.publishedAt ? post.publishedAt.slice(0, 10) : undefined,
     }));

@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 import { client, urlFor } from "@/lib/sanity";
 import { useQuery } from "@tanstack/react-query";
 import { Seo } from "@/lib/seo";
+import { getBlogSlug } from "@/lib/blogSlug";
 
 const toPlainText = (blocks: any[] = []) => {
     if (!blocks) return "";
@@ -19,8 +20,6 @@ const toPlainText = (blocks: any[] = []) => {
         })
         .join(" ");
 };
-
-const getPostSlug = (post: any) => post?.slug?.current || post?._id;
 
 const Blog = () => {
     const { data: posts, isLoading, error } = useQuery({
@@ -150,7 +149,7 @@ const Blog = () => {
 
                                             <div className="mt-auto">
                                                 <Link
-                                                    to={`/blog/${getPostSlug(post)}`}
+                                                    to={`/blog/${getBlogSlug(post)}`}
                                                     className="inline-flex items-center gap-2 text-primary font-semibold text-sm group/btn hover:gap-3 transition-all"
                                                 >
                                                     Read More
