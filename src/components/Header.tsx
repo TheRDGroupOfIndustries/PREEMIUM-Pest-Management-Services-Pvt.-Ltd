@@ -59,32 +59,23 @@ const Header = () => {
                     {link.label}
                     <ChevronDown className="h-3.5 w-3.5 transition-transform duration-200 group-hover:rotate-180" />
                   </Link>
-                  <div className="invisible absolute left-1/2 top-full z-50 w-[760px] -translate-x-1/2 pt-4 opacity-0 transition-all duration-200 group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100">
-                    <div className="rounded-xl border border-border bg-background p-4 shadow-xl">
+                  <div className="invisible absolute left-1/2 top-full z-50 w-[360px] -translate-x-1/2 pt-4 opacity-0 transition-all duration-200 group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100">
+                    <div className="rounded-xl border border-border bg-background p-3 shadow-xl">
                       <div className="mb-3 flex items-center justify-between border-b border-border pb-3">
                         <Link to="/services" className="font-heading text-sm font-bold text-foreground hover:text-primary">
                           All Pest Control Services
                         </Link>
-                        <span className="text-xs text-muted-foreground">Varanasi service pages</span>
+                        <span className="text-xs text-muted-foreground">Varanasi</span>
                       </div>
-                      <div className="grid grid-cols-2 gap-2">
+                      <div className="grid gap-1">
                         {servicesData.map((service) => (
                           <Link
                             key={service.id}
                             to={`/services/${service.seoSlug}`}
-                            className="group/item flex items-start gap-3 rounded-lg border border-transparent p-3 transition-colors hover:border-primary/20 hover:bg-accent"
+                            className="group/item flex items-center gap-3 rounded-md px-3 py-2.5 text-sm text-foreground transition-colors hover:bg-accent"
                           >
-                            <span className="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary">
-                              <service.icon className="h-4 w-4" />
-                            </span>
-                            <span className="min-w-0">
-                              <span className="block text-sm font-semibold leading-snug text-foreground group-hover/item:text-primary">
-                                {service.title}
-                              </span>
-                              <span className="mt-0.5 line-clamp-1 block text-xs text-muted-foreground">
-                                {service.shortDesc}
-                              </span>
-                            </span>
+                            <service.icon className="h-4 w-4 shrink-0 text-primary" />
+                            <span className="leading-snug group-hover/item:text-primary">{service.title}</span>
                           </Link>
                         ))}
                       </div>
