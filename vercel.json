@@ -42,6 +42,17 @@
 		}
 	],
 	"rewrites": [
+		{ "source": "/services", "destination": "/services/index.html" },
+		{ "source": "/services/:slug", "destination": "/services/:slug/index.html" },
+		{ "source": "/pest-control", "destination": "/pest-control/index.html" },
+		{ "source": "/pest-control/:slug", "destination": "/pest-control/:slug/index.html" },
+		{ "source": "/blog", "destination": "/blog/index.html" },
+		{ "source": "/blog/:slug", "destination": "/blog/:slug/index.html" },
+		{ "source": "/industries", "destination": "/industries/index.html" },
+		{ "source": "/our-process", "destination": "/our-process/index.html" },
+		{ "source": "/certifications", "destination": "/certifications/index.html" },
+		{ "source": "/gallery", "destination": "/gallery/index.html" },
+		{ "source": "/contact", "destination": "/contact/index.html" },
 		{"source":"/(.*)", "destination": "/"}
 	],
 	"headers": [

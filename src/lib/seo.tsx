@@ -12,7 +12,7 @@ export const BUSINESS_ADDRESS =
 const DEFAULT_TITLE =
   "Pest Control Services in Varanasi | Preemium";
 const DEFAULT_DESCRIPTION =
-  "Book professional pest control services in Varanasi with PREEMIUM. 30+ years of safe termite, cockroach, rodent, mosquito and bed bug treatment for homes and businesses.";
+  "Book pest control in Varanasi for termite, cockroach, rodent, mosquito and bed bug treatment for homes and businesses.";
 
 type SeoProps = {
   title?: string;
